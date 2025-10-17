@@ -1,0 +1,56 @@
+@mixin bg-linear-gradient($color1, $color2, $toRight: false) {
+	@if $toRight {
+		background: linear-gradient(to right, $color1, $color2);
+	} @else {
+		background: linear-gradient(to bottom, $color1, $color2);
+	}
+}
+
+@mixin color-linear-gradient($color1, $color2) {
+	background: -webkit-linear-gradient($color1, $color2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin button-style($light-theme: true) {
+	border-radius: $mediumBorderRadius;
+	padding: $smallPadding 24px;
+	font-size: 20px;
+	font-family: $secondaryfont;
+	@if $light-theme {
+		border: 5px solid $orange;
+		background-color: $white;
+		color: $darkblue;
+	} @else {
+		border: none;
+		background-color: $primaryred;
+		color: $white;
+	}
+}
+
+@mixin logo {
+	.logo {
+		height: 80px;
+		width: 80px;
+		position: relative;
+
+		span {
+			@include color-linear-gradient($lightorange, $orange);
+			position: absolute;
+			bottom: 0;
+			right: -20px;
+			font-size: 20px;
+			//font-family: "jsmath";
+			font-style: italic;
+		}
+
+		&.dashboard {
+			height: 50px;
+			width: 50px;
+
+			span {
+				font-size: 15px;
+			}
+		}
+	}
+}

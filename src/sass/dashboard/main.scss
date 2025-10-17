@@ -1,0 +1,140 @@
+@import "../reset.scss";
+@import "../flexbox.scss";
+@import "../colors.scss";
+@import "../constants.scss";
+@import "../variables.scss";
+@import "../fonts.scss";
+@import "../mixins.scss"; // it uses colors so should be after colors
+
+body {
+	font-family: $primaryfont;
+	line-height: 20px;
+}
+aside {
+	@include logo;
+
+	background-color: $darkblue;
+	width: 30%;
+	max-width: 150px;
+	min-height: 100vh;
+	color: $white;
+
+	> * {
+		padding: $normalPadding;
+
+		&:first-child {
+			border-bottom: 1px solid gray;
+		}
+	}
+
+	nav {
+		font-size: 14px;
+
+		li.active {
+			color: $orange;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+		&:last-child {
+			margin-top: auto;
+		}
+	}
+}
+
+main {
+	padding: $bigPadding;
+	flex: 1;
+	background: $lightorange;
+
+	section {
+		input[type="search"] {
+			padding: 8px 15px;
+			border-radius: 15px;
+			outline: none;
+			border: 3px solid transparent;
+			width: 60%;
+			max-width: 400px;
+
+			&:focus {
+				border-color: $orange;
+			}
+
+			&::placeholder {
+				color: $mediumgrey;
+			}
+		}
+
+		&:not(:first-child) {
+			> * {
+				box-shadow: 0px 0px 8px 1px $orange;
+			}
+		}
+
+		.buttons-container {
+			background: $white;
+			padding: $smallPadding;
+
+			button {
+				padding: $smallPadding $normalPadding;
+				background: $orange;
+				border-radius: $smallBorderRadius;
+			}
+		}
+
+		table {
+			flex: 1;
+			background: $white;
+			border-radius: $smallBorderRadius;
+
+			td {
+				padding: $smallPadding;
+
+				&:last-child {
+					text-align: right;
+				}
+			}
+
+			thead {
+				tr {
+					background-color: $primaryblue;
+					td {
+						font-weight: 600;
+
+						&:first-child {
+							border-top-left-radius: 10px;
+						}
+					}
+				}
+			}
+
+			tr:last-child td:first-child {
+				border-bottom-left-radius: 10px;
+			}
+
+			tr:last-child td:last-child {
+				border-bottom-right-radius: 10px;
+			}
+		}
+
+		.pagination {
+			nav ul {
+				background: $white;
+				justify-content: flex-end;
+				li {
+					padding: 5px;
+					color: $mediumgrey;
+
+					&.active {
+						a {
+							font-weight: 600;
+							text-decoration: underline;
+							color: $mainred;
+						}
+					}
+				}
+			}
+		}
+	}
+}

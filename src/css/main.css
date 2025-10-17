@@ -112,11 +112,6 @@ table {
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
-  .hide-desktop {
-    display: none;
-  }
-}
 .image-container {
   overflow: hidden;
 }
@@ -128,6 +123,11 @@ table {
   max-height: fit-content;
 }
 
+@media screen and (min-width: 768px) {
+  .hide-desktop {
+    display: none;
+  }
+}
 body {
   background-color: white;
   font-family: ubuntu;
@@ -255,6 +255,10 @@ header .logo span {
   font-size: 20px;
   font-style: italic;
 }
+header .logo.dashboard {
+  height: 50px;
+  width: 50px;
+}
 header {
   display: flex;
   height: 150px;
@@ -312,6 +316,10 @@ footer .logo span {
   right: -20px;
   font-size: 20px;
   font-style: italic;
+}
+footer .logo.dashboard {
+  height: 50px;
+  width: 50px;
 }
 footer {
   background-color: #100;

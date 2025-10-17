@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("src/fonts/jsMath-cmbx10.ttf");
+* {
+  margin: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 30px 0px;
+  font-weight: 600;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-stretch {
+  justify-content: space-between;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+.gap-60 {
+  gap: 60px;
+}
+
+.deepredbg {
+  background-color: #100;
+}
+
+.paleorangebg {
+  background-color: #fff6ec;
+}
+
+.orangeborder {
+  border-color: #f5780c;
+  border-style: solid;
+  border-width: 2px 0px 2px 0px;
+}
+
+.content-centered,
+.text-center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+  max-height: fit-content;
+}
+
+@font-face {
+  font-family: "jsmath";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/src/fonts/jsMath-cmbx10.ttf) format("ttf");
+}
+body {
+  font-family: ubuntu;
+  line-height: 20px;
+}
+
+aside .logo {
+  height: 80px;
+  width: 80px;
+  position: relative;
+}
+aside .logo span {
+  background: -webkit-linear-gradient(#fcb367, #f5780c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  font-size: 20px;
+  font-style: italic;
+}
+aside .logo.dashboard {
+  height: 50px;
+  width: 50px;
+}
+aside .logo.dashboard span {
+  font-size: 15px;
+}
+aside {
+  background-color: #0d1243;
+  width: 30%;
+  max-width: 150px;
+  min-height: 100vh;
+  color: white;
+}
+aside > * {
+  padding: 15px;
+}
+aside > *:first-child {
+  border-bottom: 1px solid gray;
+}
+aside nav {
+  font-size: 14px;
+}
+aside nav li.active {
+  color: #f5780c;
+}
+aside nav li.active a {
+  text-decoration: underline;
+}
+aside nav:last-child {
+  margin-top: auto;
+}
+
+main {
+  padding: 25px;
+  flex: 1;
+  background: #fcb367;
+}
+main section input[type=search] {
+  padding: 8px 15px;
+  border-radius: 15px;
+  outline: none;
+  border: 3px solid transparent;
+  width: 60%;
+  max-width: 400px;
+}
+main section input[type=search]:focus {
+  border-color: #f5780c;
+}
+main section input[type=search]::placeholder {
+  color: hsl(0, 0%, 56%);
+}
+main section:not(:first-child) > * {
+  box-shadow: 0px 0px 8px 1px #f5780c;
+}
+main section .buttons-container {
+  background: white;
+  padding: 10px;
+}
+main section .buttons-container button {
+  padding: 10px 15px;
+  background: #f5780c;
+  border-radius: 5px;
+}
+main section table {
+  flex: 1;
+  background: white;
+  border-radius: 5px;
+}
+main section table td {
+  padding: 10px;
+}
+main section table td:last-child {
+  text-align: right;
+}
+main section table thead tr {
+  background-color: #bdbfdd;
+}
+main section table thead tr td {
+  font-weight: 600;
+}
+main section table thead tr td:first-child {
+  border-top-left-radius: 10px;
+}
+main section table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+main section table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+main section .pagination nav ul {
+  background: white;
+  justify-content: flex-end;
+}
+main section .pagination nav ul li {
+  padding: 5px;
+  color: hsl(0, 0%, 56%);
+}
+main section .pagination nav ul li.active a {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #800000;
+}
+
+/*# sourceMappingURL=main.css.map */

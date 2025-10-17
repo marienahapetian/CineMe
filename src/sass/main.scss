@@ -4,51 +4,12 @@
 @import "flexbox.scss";
 @import "variables.scss";
 @import "constants.scss";
-
-@mixin bg-linear-gradient($color1, $color2, $toRight: false) {
-	@if $toRight {
-		background: linear-gradient(to right, $color1, $color2);
-	} @else {
-		background: linear-gradient(to bottom, $color1, $color2);
-	}
-}
-
-@mixin color-linear-gradient($color1, $color2) {
-	background: -webkit-linear-gradient($color1, $color2);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-@mixin button-style($light-theme: true) {
-	border-radius: $mediumBorderRadius;
-	padding: $smallPadding 24px;
-	font-size: 20px;
-	font-family: $secondaryfont;
-	@if $light-theme {
-		border: 5px solid $orange;
-		background-color: $white;
-		color: $darkblue;
-	} @else {
-		border: none;
-		background-color: $primaryred;
-		color: $white;
-	}
-}
+@import "mixins.scss"; // it uses colors so should be after colors
 
 @media screen and (min-width: 768px) {
 	.hide-desktop {
 		display: none;
 	}
-}
-
-.image-container {
-	overflow: hidden;
-}
-.image-container img {
-	object-fit: cover;
-	width: 100%;
-	min-height: 100%;
-	max-height: fit-content;
 }
 body {
 	background-color: $white;
@@ -174,24 +135,6 @@ main {
 
 		&:hover h3 {
 			display: block;
-		}
-	}
-}
-
-@mixin logo {
-	.logo {
-		height: 80px;
-		width: 80px;
-		position: relative;
-
-		span {
-			@include color-linear-gradient($lightorange, $orange);
-			position: absolute;
-			bottom: 0;
-			right: -20px;
-			font-size: 20px;
-			//font-family: "jsmath";
-			font-style: italic;
 		}
 	}
 }
