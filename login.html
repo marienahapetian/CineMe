@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="src/css/main.css" />
+		<title>CineMe</title>
+	</head>
+	<body class="login-page">
+		<div class="main-container">
+			<header>
+				<a href="" class="hide-desktop mobile-menu-trigger"></a>
+				<a href="index.html" class="logo" aria-label="Go to Main Page">
+					<img src="src/img/logo.png" />
+					<span>CineMe</span>
+				</a>
+				<ul class="flex flex-row hide-mobile" id="primary-nav">
+					<li><a href="category.html">Professions</a></li>
+					<li><a href="category.html">Movies</a></li>
+					<li><a href="category.html">Specialists</a></li>
+					<li><a href="category.html">Awards</a></li>
+				</ul>
+				<div class="flex gap-10">
+					<span><input type="text" class="searchbox" placeholder="Search" /></span>
+					<span class="hide-mobile"
+						><a href="login.html" type="button" class="useraccount"> <img src="src/img/icons/user.png" aria-hidden="true" /></a
+					></span>
+				</div>
+			</header>
+
+			<main class="flex flex-col content-centered">
+				<div class="tab flex gap-15">
+					<button class="tablinks active" onclick="openCity(event, 'login')">Login</button>
+					<button class="tablinks" onclick="openCity(event, 'register')">Sign Up</button>
+				</div>
+
+				<!-- Tab content -->
+				<div id="login" class="tabcontent">
+					<form class="flex flex-col gap-20">
+						<input type="text" name="username" placeholder="username" />
+						<input type="password" name="password" placeholder="password" />
+						<button type="submit" value="login">Login</button>
+					</form>
+				</div>
+
+				<div id="register" class="tabcontent">
+					<form class="flex flex-col gap-20">
+						<input type="text" name="name" placeholder="Name" />
+						<input type="text" name="lastname" placeholder="Last name" />
+						<input type="email" name="email" placeholder="Email" />
+						<input type="password" name="password" placeholder="Password" />
+						<input type="password" name="password2" placeholder="Repeat Password" />
+						<button type="submit" value="login">Sign Up</button>
+					</form>
+				</div>
+			</main>
+
+			<footer>
+				<a href="" class="logo" aria-label="Go to Main Page">
+					<img src="src/img/logo.png" />
+					<span>CineMe</span>
+				</a>
+				<ul class="flex flex-row gap-60">
+					<li>
+						<ul>
+							<li><a href="">About us</a></li>
+							<li><a href="">Privacy Policy</a></li>
+							<li><a href="">Terms and Conditions</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="">TV Shows</a></li>
+							<li><a href="">Movies</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="">Contact Us</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="flex gap-10" id="social-icons">
+					<ul class="flex flex-col flex-row-mobile gap-15">
+						<li>
+							<a href=""><img src="src/img/Social Networks/facebook-app-symbol.png" /></a>
+						</li>
+						<li>
+							<a href=""><img src="src/img/Social Networks/instagram.png" /></a>
+						</li>
+						<li>
+							<a href=""><img src="src/img/Social Networks/twitter(1).png" /></a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+		<script>
+			function openCity(evt, cityName) {
+				// Declare all variables
+				var i, tabcontent, tablinks;
+
+				// Get all elements with class="tabcontent" and hide them
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+
+				// Get all elements with class="tablinks" and remove the class "active"
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+
+				// Show the current tab, and add an "active" class to the button that opened the tab
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+		</script>
+	</body>
+</html>

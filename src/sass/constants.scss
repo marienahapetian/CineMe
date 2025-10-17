@@ -1,0 +1,17 @@
+.deepredbg {
+	background-color: $blackred;
+}
+.paleorangebg {
+	background-color: $paleorange;
+}
+.orangeborder {
+	border-color: $orange;
+	border-style: solid;
+	border-width: 2px 0px 2px 0px;
+}
+.content-centered,
+.text-center {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="src/css/main.css" />
+		<title>CineMe</title>
+	</head>
+	<body class="category-page">
+		<div class="main-container">
+			<header>
+				<a href="" class="hide-desktop mobile-menu-trigger"></a>
+				<a href="index.html" class="logo" aria-label="Go to Main Page">
+					<img src="src/img/logo.png" />
+					<span>CineMe</span>
+				</a>
+				<ul class="flex flex-row hide-mobile" id="primary-nav">
+					<li><a href="category.html">Professions</a></li>
+					<li><a href="category.html">Movies</a></li>
+					<li><a href="category.html">Specialists</a></li>
+					<li><a href="category.html">Awards</a></li>
+				</ul>
+				<div class="flex gap-10">
+					<span><input type="text" class="searchbox" placeholder="Search" /></span>
+					<span class="hide-mobile"
+						><a href="login.html" class="useraccount"> <img src="src/img/icons/user.png" aria-hidden="true" /></a
+					></span>
+				</div>
+			</header>
+
+			<main class="flex flex-col gap-40">
+				<h2 class="text-center">Armenian Actors</h2>
+				<div class="content-sidebar">
+					<aside class="flex flex-col">
+						<section>
+							<h3>Gender</h3>
+							<ul>
+								<li>
+									<label><input type="radio" value="all" checked /><span>All</span></label>
+								</li>
+								<li>
+									<label><input type="radio" value="male" /><span>Male</span></label>
+								</li>
+								<li>
+									<label><input type="radio" value="female" /><span>Female</span></label>
+								</li>
+							</ul>
+						</section>
+						<section>
+							<h3>Age</h3>
+							<ul>
+								<li>
+									<label><input type="checkbox" value="all" checked /><span>All</span></label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="20-30" /><span>20-30 yo</span></label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="31-40" /><span>31-40 yo</span></label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="41-50" /><span>41-50 yo</span></label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="50+" /><span>50+ yo</span></label>
+								</li>
+							</ul>
+						</section>
+						<section>
+							<h3>Profession</h3>
+							<ul>
+								<li>
+									<label><input type="checkbox" value="all" checked /><span>All</span></label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="stunt" /><span>Stunt Double</span></label>
+								</li>
+								<li>
+									<label><input type="checkbox" value="crowd" /><span>Crowd Work</span></label>
+								</li>
+							</ul>
+						</section>
+					</aside>
+
+					<div class="content">
+						<section class="flex flex-wrap">
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/hovikkeuchkerian.jpg" />
+								<span>Hovik Keuchkerian</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/AngelaSarafyan2.jpg" />
+								<span>Angela Sarafyan</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/joemanganiello.png" />
+								<span>Joe Manganiello</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/1140-cher.jpg" />
+								<span>Cher</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/andyserkis.jpg" />
+								<span>Andy Serkis</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/ericbogosian.jpg" />
+								<span>Eric Bogosian</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/aznavour.jpg" />
+								<span>Charlez Aznavour</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/simonabkarian.jpg" />
+								<span>Simon Abkarian</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/marcokhanlian.jpg" />
+								<span>Marco Khanlian</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/edgarmadatian.jpg" />
+								<span>Edgar Damatian</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/KarenKaragulian.jpg" />
+								<span>Karen Karagulian</span>
+							</a>
+							<a href="single-prof.html" class="image-container">
+								<img src="src/img/People/rowanblanchard.jpg" />
+								<span>Rowan Blanchard</span>
+							</a>
+						</section>
+						<section class="text-center">
+							<a href="">View More</a>
+						</section>
+					</div>
+				</div>
+			</main>
+
+			<footer>
+				<a href="" class="logo" aria-label="Go to Main Page">
+					<img src="src/img/logo.png" />
+					<span>CineMe</span>
+				</a>
+				<ul class="flex flex-row gap-60">
+					<li>
+						<ul>
+							<li><a href="">About us</a></li>
+							<li><a href="">Privacy Policy</a></li>
+							<li><a href="">Terms and Conditions</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="">TV Shows</a></li>
+							<li><a href="">Movies</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="">Contact Us</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="flex gap-10" id="social-icons">
+					<ul class="flex flex-col flex-row-mobile gap-15">
+						<li>
+							<a href=""><img src="src/img/Social Networks/facebook-app-symbol.png" /></a>
+						</li>
+						<li>
+							<a href=""><img src="src/img/Social Networks/instagram.png" /></a>
+						</li>
+						<li>
+							<a href=""><img src="src/img/Social Networks/twitter(1).png" /></a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

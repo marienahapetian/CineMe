@@ -21,7 +21,7 @@ a {
 }
 
 h2 {
-  margin: 40px 0px;
+  margin: 30px 0px;
 }
 
 .flex {
@@ -66,7 +66,7 @@ h2 {
 }
 
 .deepredbg {
-  background-color: #1e0203;
+  background-color: #100;
 }
 
 .paleorangebg {
@@ -89,13 +89,82 @@ h2 {
   box-shadow: 0px 0px 30px 0px #97291f;
 }
 
+main {
+  background-color: black;
+  color: white;
+}
+main section {
+  background-color: inherit;
+  padding-bottom: 40px;
+}
+main .slider__track {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+main .slider__track ul {
+  position: relative;
+  left: -100px;
+}
+main .slider__slide {
+  position: relative;
+}
+main .slider__slide .image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+main .slider__slide.vertical .info {
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 4px);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+main .slider__slide .info {
+  position: absolute;
+  background: #100;
+  opacity: 0.8;
+  bottom: -100%;
+  width: calc(100% - 4px);
+  left: 2px;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.2s linear;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+main .slider__slide .info .name {
+  font-size: 14px;
+}
+main .slider__slide .info .profession,
+main .slider__slide .info .year {
+  color: #ffc72e;
+  font-size: 10px;
+}
+main .slider__slide:hover .info {
+  bottom: 2px;
+}
+main .slider__slide.horizontal .image-container {
+  width: 200px;
+  height: 150px;
+}
+main .slider__slide.vertical .image-container {
+  width: 135px;
+  height: 205px;
+}
+
 header {
   display: flex;
   height: 150px;
   padding: 15px;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #1a121e, #800000);
+  background: linear-gradient(to right, #100, #800000);
 }
 
 header a.logo,
@@ -132,73 +201,6 @@ header button.useraccount img {
   width: 15px;
 }
 
-main {
-  background-color: white;
-}
-
-main section {
-  padding-bottom: 40px;
-}
-
-main .slider__track {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-main .slider__slide {
-  position: relative;
-}
-
-main .slider__slide.horizontal .image-container {
-  width: 200px;
-  height: 150px;
-}
-
-main .slider__slide.vertical .image-container {
-  width: 135px;
-  height: 205px;
-}
-
-main .slider__slide .image-container img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-main .slider__slide .info {
-  position: absolute;
-  background: #1a121e;
-  opacity: 0.8;
-  bottom: -100%;
-  width: 100%;
-  color: white;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: all 0.2s linear;
-}
-
-main .slider__slide:hover .info {
-  bottom: 0;
-}
-
-main .slider__slide.vertical .info {
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-main .slider__slide .info .name {
-  font-size: 14px;
-}
-
-main .slider__slide .info .profession,
-main .slider__slide .info .year {
-  color: #ffc72e;
-  font-size: 10px;
-}
-
 main .cat-card {
   display: flex;
   flex-direction: column;
@@ -227,7 +229,7 @@ main .cat-card:hover h3 {
 }
 
 footer {
-  background-color: #1a121e;
+  background-color: #100;
   height: 173px;
   display: flex;
   padding: 15px;
