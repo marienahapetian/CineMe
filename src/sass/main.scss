@@ -1,10 +1,12 @@
-@import "reset.scss";
-@import "colors.scss";
-@import "fonts.scss";
-@import "flexbox.scss";
-@import "variables.scss";
-@import "constants.scss";
-@import "mixins.scss"; // it uses colors so should be after colors
+@import "reset";
+@import "colors";
+@import "fonts";
+@import "flexbox";
+@import "variables";
+@import "constants";
+@import "lightbox";
+@import "slider";
+@import "mixins"; // it uses colors so should be after colors
 
 @media screen and (min-width: 768px) {
 	.hide-desktop {
@@ -12,7 +14,7 @@
 	}
 }
 body {
-	background-color: $white;
+	background-color: $blackred;
 	font-family: $primaryfont;
 	line-height: 20px;
 }
@@ -38,77 +40,7 @@ main {
 	section {
 		background-color: inherit;
 		padding-bottom: $hugePadding;
-	}
-
-	.slider__track {
-		overflow-x: auto;
-		overflow-y: hidden;
-
-		ul {
-			position: relative;
-			left: -100px;
-		}
-	}
-
-	.slider__slide {
-		position: relative;
-
-		.image-container {
-			border-radius: $imgBorderRadius;
-			border: $imgBorderWidth solid $black;
-		}
-
-		&.vertical .info {
-			align-items: center;
-			justify-content: center;
-			height: calc(100% - #{2 * $imgBorderWidth});
-
-			border-top-left-radius: $imgBorderRadius - 2 * $imgBorderWidth;
-			border-top-right-radius: $imgBorderRadius - 2 * $imgBorderWidth;
-		}
-
-		.info {
-			position: absolute;
-			background: $blackred;
-			opacity: 0.8;
-			bottom: -100%;
-			width: calc(100% - #{2 * $imgBorderWidth});
-			left: $imgBorderWidth;
-			color: $white;
-			padding: $smallPadding;
-
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			transition: all 0.2s linear;
-
-			border-bottom-left-radius: $imgBorderRadius - 2 * $imgBorderWidth;
-			border-bottom-right-radius: $imgBorderRadius - 2 * $imgBorderWidth;
-
-			.name {
-				font-size: 14px;
-			}
-
-			.profession,
-			.year {
-				color: $mainyellow;
-				font-size: 10px;
-			}
-		}
-
-		&:hover .info {
-			bottom: $imgBorderWidth;
-		}
-	}
-
-	.slider__slide.horizontal .image-container {
-		width: 200px;
-		height: 150px;
-	}
-
-	.slider__slide.vertical .image-container {
-		width: 135px;
-		height: 205px;
+		width: 100%;
 	}
 
 	.cat-card {
@@ -314,7 +246,7 @@ footer {
 	}
 	section {
 		width: 100%;
-		max-width: 750px;
+		max-width: 850px;
 		padding: $normalPadding;
 		@include bg-linear-gradient($paleorange, $lightorange);
 		gap: 10px;
@@ -329,12 +261,12 @@ footer {
 		}
 
 		.left-content {
-			width: 220px;
+			width: 300px;
 
 			.gallery {
 				> span {
-					width: 60px;
-					height: 60px;
+					width: 85px;
+					height: 85px;
 				}
 			}
 		}

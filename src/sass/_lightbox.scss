@@ -1,0 +1,35 @@
+.gallery {
+	.image-container {
+		cursor: pointer;
+	}
+}
+.lightbox {
+	background: rgba(0, 0, 0, 0.9);
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+
+	.before,
+	.after {
+		z-index: 10;
+		padding: 25px;
+		cursor: pointer;
+		color: $white;
+		transition: all 0.2s linear;
+		transform: rotate(180deg);
+		font-size: 30px;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+	}
+	.after {
+		left: inherit;
+		right: 0;
+		transform: rotate(0);
+	}
+}

@@ -1,0 +1,122 @@
+.slider {
+	position: relative;
+
+	.before,
+	.after {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.1);
+		z-index: 10;
+		height: 100%;
+		padding: 0 15px;
+		cursor: pointer;
+		color: $white;
+		transition: all 0.2s linear;
+		transform: rotate(180deg);
+		font-size: 25px;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+	}
+	.after {
+		left: inherit;
+		right: 0;
+		transform: rotate(0);
+	}
+}
+.slider__track {
+	overflow: hidden;
+
+	ul {
+		position: relative;
+		left: 0;
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+.film_line {
+	height: 25px;
+	background: $black;
+	ul {
+		display: flex;
+		height: 100%;
+		justify-content: space-between;
+		gap: 80px;
+		align-items: center;
+
+		li {
+			background: $white;
+			flex: 1;
+			height: 60%;
+			display: block;
+		}
+	}
+}
+.slider__slide {
+	position: relative;
+
+	.image-container {
+		border-radius: $imgBorderRadius;
+		border: $imgBorderWidth solid $black;
+	}
+
+	&.vertical .info {
+		align-items: center;
+		justify-content: center;
+		height: calc(100% - #{2 * $imgBorderWidth});
+		bottom: -100%;
+		border-top-left-radius: $imgBorderRadius - 2 * $imgBorderWidth;
+		border-top-right-radius: $imgBorderRadius - 2 * $imgBorderWidth;
+	}
+
+	.info {
+		position: absolute;
+		background: $blackred;
+		opacity: 0.8;
+		bottom: -2 * $smallPadding;
+		width: calc(100% - #{2 * $imgBorderWidth});
+		left: $imgBorderWidth;
+		color: $white;
+		padding: $tinyPadding $smallPadding;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		transition: all 0.2s linear;
+
+		border-bottom-left-radius: $imgBorderRadius - 2 * $imgBorderWidth;
+		border-bottom-right-radius: $imgBorderRadius - 2 * $imgBorderWidth;
+
+		.name {
+			font-size: 14px;
+		}
+
+		.profession,
+		.year {
+			color: $mainyellow;
+			font-size: 10px;
+		}
+	}
+
+	&:hover .info {
+		bottom: $imgBorderWidth;
+	}
+}
+
+.slider__slide.horizontal .image-container {
+	// width: 250px;
+	// height: 200px;
+	height: 100%;
+}
+
+.slider__slide.vertical .image-container {
+	// width: 160px;
+	// height: 230px;
+	height: 100%;
+}
