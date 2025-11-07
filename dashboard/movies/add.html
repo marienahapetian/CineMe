@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../src/css/dashboard/main.css" />
+		<title>User Dashboard</title>
+		<script defer src="/src/js/filepicker.js"></script>
+	</head>
+	<body class="flex">
+		<aside class="flex flex-col gap-40">
+			<div class="flex flex-col gap-10">
+				<a href="index.html" class="logo dashboard" aria-label="Go to Main Page">
+					<img src="../../src/img/logo.png" />
+					<span>CineMe</span>
+				</a>
+			</div>
+			<nav>
+				<ul class="flex flex-col gap-10">
+					<li class="crumb"><a href="/dashboard/list.html">Movies</a></li>
+					<li class="crumb"><a href="/dashboard/list.html">TV Series</a></li>
+					<li class="crumb"><a href="/dashboard/list.html">Professionals</a></li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="flex flex-col gap-10">
+					<li class="crumb"><a href="#">Go to Website</a></li>
+					<li class="crumb"><a href="#">Log Out</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<main class="flex flex-col gap-20">
+			<section>
+				<div class="form-container">
+					<h2>Add new film</h2>
+					<form>
+						<div class="input-container">
+							<label for="title">Title</label>
+							<input type="text" name="title" id="title" required class="dropdown-search" />
+						</div>
+						<div class="input-container">
+							<label for="director">Director</label>
+							<input type="text" name="director" id="director" placeholder="Type to select" required class="dropdown-search" />
+						</div>
+						<div class="input-container">
+							<label for="cast[0]">Cast Members</label>
+							<div>
+								<input type="text" name="cast[0]" id="cast[0]" placeholder="Type to select" />
+							</div>
+							<div class="add-new"><span>Add new cast member</span></div>
+						</div>
+						<div class="input-container">
+							<label for="gallery[0]">Gallery</label>
+							<div class="filepicker">
+								<input type="file" name="gallery[0]" id="gallery[0]" accept=".png, .jpg, .jpeg" />
+								<span>Add Image</span>
+							</div>
+						</div>
+						<div class="input-container buttons-container">
+							<button type="reset">Cancel</button>
+
+							<button type="submit">Create</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

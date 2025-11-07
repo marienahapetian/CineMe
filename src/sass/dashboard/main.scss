@@ -8,7 +8,7 @@
 
 body {
 	font-family: $primaryfont;
-	line-height: 20px;
+	// line-height: 20px;
 }
 aside {
 	@include logo;
@@ -76,10 +76,13 @@ main {
 			background: $white;
 			padding: $smallPadding;
 
-			button {
+			button,
+			a.button {
 				padding: $smallPadding $normalPadding;
 				background: $orange;
 				border-radius: $smallBorderRadius;
+				color: $white;
+				display: inline-block;
 			}
 		}
 
@@ -131,6 +134,138 @@ main {
 							font-weight: 600;
 							text-decoration: underline;
 							color: $mainred;
+						}
+					}
+				}
+			}
+		}
+
+		.form-container {
+			background-color: $white;
+			padding: $normalPadding $hugePadding;
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: $normalGap;
+
+				.input-container {
+					display: flex;
+					flex-direction: column;
+					gap: $smallGap;
+
+					input {
+						padding: $smallPadding;
+						width: 100%;
+						font-size: 16px;
+					}
+
+					&.buttons-container {
+						flex-direction: row;
+						justify-content: space-between;
+
+						button[type="reset"] {
+							background-color: $mediumgrey;
+						}
+					}
+
+					.add-new {
+						display: flex;
+						background: $paleorange;
+						color: $black;
+						padding: $tinyPadding;
+						cursor: pointer;
+						border: 1px solid $orange;
+						align-items: center;
+						justify-content: center;
+						gap: $tinyGap;
+						font-size: 14px;
+
+						&:hover {
+							&::before {
+								transform: scale(1.2);
+							}
+						}
+
+						&::before {
+							font-size: 30px;
+							color: $orange;
+							content: "\002B";
+							display: inline-block;
+							transition: all 0.2s linear;
+							position: relative;
+							top: -2px;
+						}
+					}
+
+					.gallery {
+						display: flex;
+						align-items: center;
+						gap: $normalGap;
+						flex-wrap: wrap;
+
+						.single-img {
+							position: relative;
+
+							div {
+								position: absolute;
+								top: 0;
+								height: 100%;
+								width: 100%;
+								background: rgba(0, 0, 0, 0.8);
+								display: none;
+								cursor: pointer;
+								align-items: center;
+								justify-content: center;
+								gap: $smallGap;
+								color: $white;
+
+								span.edit:hover,
+								span.delete:hover {
+									text-decoration: underline;
+								}
+								span.edit::before {
+									content: "Edit";
+								}
+								span.delete::before {
+									content: "Delete";
+								}
+							}
+
+							&:hover {
+								div {
+									display: flex;
+								}
+							}
+						}
+					}
+					.filepicker {
+						padding: $normalPadding;
+						width: fit-content;
+						background-color: $paleorange;
+						border: 1px solid $orange;
+						display: flex;
+						align-items: center;
+						gap: $tinyGap;
+						cursor: pointer;
+
+						input[type="file"] {
+							display: none;
+						}
+
+						&::before {
+							content: "\002B";
+							top: -3px;
+							position: relative;
+							font-size: 40px;
+							display: inline-block;
+							transition: all linear 0.2s;
+							color: $orange;
+						}
+
+						&:hover {
+							&::before {
+								transform: scale(1.2);
+							}
 						}
 					}
 				}
