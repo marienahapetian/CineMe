@@ -33,8 +33,8 @@
 
 			<main class="flex flex-col content-centered">
 				<div class="tab flex gap-15">
-					<button class="tablinks active" onclick="openCity(event, 'login')">Login</button>
-					<button class="tablinks" onclick="openCity(event, 'register')">Sign Up</button>
+					<button class="tablinks active" onclick="openTab(event, 'login')">Login</button>
+					<button class="tablinks" onclick="openTab(event, 'register')">Sign Up</button>
 				</div>
 
 				<!-- Tab content -->
@@ -100,7 +100,7 @@
 		</div>
 
 		<script>
-			function openCity(evt, cityName) {
+			function openTab(evt, target) {
 				// Declare all variables
 				var i, tabcontent, tablinks;
 
@@ -117,7 +117,7 @@
 				}
 
 				// Show the current tab, and add an "active" class to the button that opened the tab
-				document.getElementById(cityName).style.display = "block";
+				document.getElementById(target).style.display = "block";
 				evt.currentTarget.className += " active";
 			}
 		</script>
