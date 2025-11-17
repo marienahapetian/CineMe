@@ -2,11 +2,11 @@ class Slider {
 	constructor(sliderCont, visibleCount = 4) {
 		this.sliderContainer = sliderCont;
 		this.visibleCount = visibleCount;
-		this.theme = this.sliderContainer.dataset.theme ? this.sliderContainer.dataset.theme : "default";
+		this.hasLines = this.sliderContainer.dataset.lines ? this.sliderContainer.dataset.lines : false;
 
 		this.initiateTrack();
 
-		if (this.theme == "default") {
+		if (this.hasLines) {
 			this.addFilmLines();
 		}
 
