@@ -97,6 +97,7 @@ class Slider {
 	nextSlide() {
 		console.log("in nextSlide", this.currentIndex, this.visibleCount, this.totalSlides);
 
+		// deactivate next arrow on slider end
 		if (this.currentIndex + this.visibleCount >= this.totalSlides) return;
 
 		this.currentIndex++;
@@ -106,6 +107,7 @@ class Slider {
 	prevSlide() {
 		console.log("in prevSlide", this.currentIndex, this.visibleCount, this.totalSlides);
 
+		// deactivate prev arrow on slider start
 		if (this.currentIndex == 0) return;
 
 		this.currentIndex--;
@@ -117,9 +119,10 @@ class Slider {
 		if (this.dots) {
 			this.dots.forEach((dot, i) => {
 				if (i == index) {
-					dot.className = "active";
+					dot.className = "active"; // change color of active slide dot
+					this.currentIndex = i; //update current slide index
 				} else {
-					dot.className = "";
+					dot.className = ""; // remove active color from the remaining dots
 				}
 			});
 		}
