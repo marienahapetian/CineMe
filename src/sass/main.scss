@@ -425,6 +425,30 @@ footer {
 	}
 }
 
+.aboutus-page {
+	main {
+		gap: $bigPadding;
+	}
+	.banner {
+		height: 100px;
+		background-color: blanchedalmond;
+		width: 100%;
+	}
+
+	p {
+		max-width: 80%;
+		letter-spacing: 1px;
+		line-height: 1.2;
+		text-align: justify;
+
+		img.left {
+			float: left;
+		}
+		img.right {
+			float: right;
+		}
+	}
+}
 @media screen and (max-width: 768px) {
 	header,
 	footer {

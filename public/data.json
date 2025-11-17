@@ -1,0 +1,169 @@
+{
+	"actors": [
+		{
+			"name": "Sev Ohanian",
+			"profession": "Director",
+			"image": "/src/img/People/Sev+RESIZED.png"
+		},
+		{
+			"name": "Cher",
+			"profession": "Actress Singer",
+			"image": "/src/img/People/1140-cher.jpg"
+		},
+		{
+			"name": "Eric Bogosian",
+			"profession": "Actor",
+			"image": "/src/img/People/ericbogosian.jpg"
+		},
+		{
+			"name": "Angela Sarafyan",
+			"profession": "Actress",
+			"image": "/src/img/People/angelasarafyan.jpg"
+		},
+		{
+			"name": "Cosmo Jarvis",
+			"profession": "Actor",
+			"image": "/src/img/People/cosmojarvis.webp"
+		},
+		{
+			"name": "Hovik Keuchkerian",
+			"profession": "Actor",
+			"image": "/src/img/People/hovikkeuchkerian.jpg"
+		},
+		{
+			"name": "Edgar Damatian",
+			"profession": "Actor",
+			"image": "/src/img/People/edgarmadatian.jpg"
+		},
+		{
+			"name": "Karen Karagulian",
+			"profession": "Actor",
+			"image": "/src/img/People/KarenKaragulian.jpg"
+		},
+		{
+			"name": "Rowan Blanchard",
+			"profession": "Actress",
+			"image": "/src/img/People/rowanblanchard.jpg"
+		},
+		{
+			"name": "Marco Khanlian",
+			"profession": "Actor",
+			"image": "/src/img/People/marcokhanlian.jpg"
+		},
+		{
+			"name": "Andy Serkis",
+			"profession": "Actor",
+			"image": "/src/img/People/andyserkis.jpg"
+		},
+		{
+			"name": "Charlez Aznavour",
+			"profession": "Actor",
+			"image": "/src/img/People/aznavour.jpg"
+		},
+		{
+			"name": "Marco Khanlian",
+			"profession": "Actor",
+			"image": "/src/img/People/marcokhanlian.jpg"
+		},
+		{
+			"name": "Joe Manganiello",
+			"profession": "Actor",
+			"image": "/src/img/People/joemanganiello.png"
+		}
+	],
+
+	"movies": [
+		{
+			"name": "Lord of the rings",
+			"image": "/src/img/Movies/lordoftherings.jpg",
+			"year": "1997"
+		},
+		{
+			"name": "Titanic",
+			"image": "/src/img/Movies/titanic.jpg",
+			"year": "1997"
+		},
+		{
+			"name": "Kill Bill",
+			"image": "/src/img/Movies/killbill.jpg",
+			"year": "2003"
+		},
+		{
+			"name": "Harry Potter",
+			"image": "/src/img/Movies/harrypotter.jpg",
+			"year": "2003"
+		},
+		{
+			"name": "Pretty Woman",
+			"image": "/src/img/Movies/prettywoman.jpg",
+			"year": "2003"
+		},
+		{
+			"name": "Star Wars",
+			"image": "/src/img/Movies/starwars.jpg",
+			"year": "2003"
+		},
+		{
+			"name": "Wicked",
+			"image": "/src/img/Movies/wicked.jpg",
+			"year": "2024"
+		},
+		{
+			"name": "Fast & Furious",
+			"image": "/src/img/Movies/fastandfurious.jpg",
+			"year": "2003"
+		}
+	],
+	"professions": [
+		{
+			"name": "Director",
+			"image": "/src/img/Professions/director.png"
+		},
+		{
+			"name": "Actor",
+			"image": "/src/img/Professions/actor.png"
+		},
+		{
+			"name": "Operator",
+			"image": "/src/img/Professions/camera-operator.png"
+		},
+		{
+			"name": "Producer",
+			"image": "/src/img/Professions/producer.png"
+		},
+		{
+			"name": "Make-up Artist",
+			"image": "/src/img/Professions/make-up-artist.png"
+		},
+		{
+			"name": "Fashion Designer",
+			"image": "/src/img/Professions/fashion-designer.png"
+		}
+	],
+	"news": [
+		{
+			"title": "Box Office: ‘Now You See Me 3’ Makes $2.1 Million in Previews, Beating ‘Running Man’ With $1.9 Million",
+			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
+			"image": "/src/img/news/nowyouseeme.jpg",
+			"date": "2025-11-10"
+		},
+		{
+			"title": "'Wicked: For Good' Is Fandango's Biggest PG Pre-Seller Of All Time & Highest Overall For 2025 – Box Office",
+			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
+			"image": "/src/img/news/wicked.jpeg",
+			"date": "2025-11-10"
+		},
+		{
+			"title": "Nicolas Cage to Reunite With John Woo for ‘Gambino’ Mafia Boss Biopic",
+			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
+			"image": "/src/img/news/gambino.jpg",
+			"date": "2025-11-10"
+		},
+		{
+			"title": "Netflix's In Your Dreams Is The Best Pixar Movie They Never Made",
+			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
+			"image": "/src/img/news/inyourdreams.jpg",
+			"date": "2025-11-10"
+		}
+	]
+}

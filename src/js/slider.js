@@ -2,16 +2,28 @@ class Slider {
 	constructor(sliderCont, visibleCount = 4) {
 		this.sliderContainer = sliderCont;
 		this.visibleCount = visibleCount;
+		this.theme = this.sliderContainer.dataset.theme ? this.sliderContainer.dataset.theme : "default";
 
-		this.addArrows();
-		this.addFilmLines();
 		this.initiateTrack();
+
+		if (this.theme == "default") {
+			this.addFilmLines();
+		}
+
+		this.addControls();
+
 		this.addEventListeners();
 	}
 
 	addEventListeners() {
 		this.beforeIcon.addEventListener("click", () => this.prevSlide());
 		this.afterIcon.addEventListener("click", () => this.nextSlide());
+
+		if (this.dots) {
+			this.dots.forEach((dot, index) => {
+				dot.addEventListener("click", () => this.goToSlide(index));
+			});
+		}
 	}
 
 	addFilmLines() {
@@ -32,7 +44,7 @@ class Slider {
 		this.sliderContainer.parentElement.insertBefore(secondLine, this.sliderContainer.nextSibling);
 	}
 
-	addArrows() {
+	addControls() {
 		this.beforeIcon = document.createElement("span");
 		this.beforeIcon.classList.add("before");
 		this.beforeIcon.innerHTML = "&#10140;";
@@ -40,6 +52,20 @@ class Slider {
 		this.afterIcon = document.createElement("span");
 		this.afterIcon.classList.add("after");
 		this.afterIcon.innerHTML = "&#10140;";
+
+		// add dots only if we display 1 slide
+		if (this.visibleCount == 1) {
+			this.dotsLine = document.createElement("div");
+			this.dotsLine.className = "dots";
+			for (let i = 0; i < this.totalSlides; i++) {
+				let dot = document.createElement("span");
+				if (i == this.currentIndex) dot.className = "active";
+				this.dotsLine.appendChild(dot);
+			}
+
+			this.sliderContainer.appendChild(this.dotsLine);
+			this.dots = this.dotsLine.querySelectorAll("span");
+		}
 
 		this.sliderContainer.insertBefore(this.beforeIcon, this.sliderContainer.firstChild);
 		this.sliderContainer.appendChild(this.afterIcon);
@@ -57,14 +83,19 @@ class Slider {
 		this.sliderStep = this.slideWidth;
 
 		this.slides.forEach((slide) => {
-			slide.style.width = `${this.slideWidth}px`;
-			slide.style.flexShrink = "0";
+			if (this.visibleCount > 1) {
+				slide.style.width = `${this.slideWidth}px`;
+				slide.style.flexShrink = "0";
+			} else {
+				slide.style.height = this.sliderContainer.dataset.height;
+				slide.style.width = `${this.slideWidth}px`;
+			}
 		});
 		this.currentIndex = 0;
 	}
 
 	nextSlide() {
-		console.log(this.currentIndex, this.visibleCount, this.totalSlides);
+		console.log("in nextSlide", this.currentIndex, this.visibleCount, this.totalSlides);
 
 		if (this.currentIndex + this.visibleCount >= this.totalSlides) return;
 
@@ -73,7 +104,7 @@ class Slider {
 	}
 
 	prevSlide() {
-		console.log(this.currentIndex, this.visibleCount, this.totalSlides);
+		console.log("in prevSlide", this.currentIndex, this.visibleCount, this.totalSlides);
 
 		if (this.currentIndex == 0) return;
 
@@ -83,19 +114,16 @@ class Slider {
 	}
 
 	goToSlide(index) {
+		if (this.dots) {
+			this.dots.forEach((dot, i) => {
+				if (i == index) {
+					dot.className = "active";
+				} else {
+					dot.className = "";
+				}
+			});
+		}
+
 		this.sliderList.style.transform = `translateX(-${index * this.slideWidth}px)`;
 	}
 }
-
-let sliders = document.querySelectorAll(".slider");
-
-sliders.forEach((slider) => {
-	let visibleCount = 4;
-	if (slider.getAttribute("data-slidesToShow")) visibleCount = parseInt(slider.getAttribute("data-slidesToShow"));
-
-	let sliderObj = new Slider(slider, visibleCount);
-
-	//setInterval(sliderObj.animateLeft.bind(sliderObj), 5000);
-	//sliderObj.animate();
-	//setInterval(() => sliderObj.animateLeft(), 2000); // autoplay every 5s
-});

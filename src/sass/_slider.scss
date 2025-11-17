@@ -58,12 +58,38 @@
 		}
 	}
 }
+
+.dots {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	margin-top: 10px;
+
+	span {
+		width: 10px;
+		height: 10px;
+		background-color: gray;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&.active {
+			background-color: $wine;
+		}
+	}
+}
 .slider__slide {
 	position: relative;
+
+	> a {
+		height: inherit;
+	}
 
 	.image-container {
 		border-radius: $imgBorderRadius;
 		border: $imgBorderWidth solid $black;
+		height: inherit;
 	}
 
 	&.vertical .info {
@@ -76,6 +102,7 @@
 	}
 
 	.info {
+		height: inherit;
 		position: absolute;
 		background: $blackred;
 		opacity: 0.8;
@@ -101,6 +128,25 @@
 		.year {
 			color: $mainyellow;
 			font-size: 10px;
+		}
+	}
+
+	.content {
+		background-color: $blackred;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		max-width: 400px;
+		padding: $smallPadding;
+		gap: $smallPadding;
+
+		.name {
+			color: $mainyellow;
+		}
+
+		.year {
+			font-style: italic;
 		}
 	}
 

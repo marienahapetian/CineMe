@@ -215,12 +215,35 @@ table {
   display: block;
 }
 
+.dots {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+.dots span {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dots span.active {
+  background-color: #420101;
+}
+
 .slider__slide {
   position: relative;
+}
+.slider__slide > a {
+  height: inherit;
 }
 .slider__slide .image-container {
   border-radius: 0px;
   border: 2px solid #100;
+  height: inherit;
 }
 .slider__slide.vertical .info {
   align-items: center;
@@ -231,6 +254,7 @@ table {
   border-top-right-radius: -4px;
 }
 .slider__slide .info {
+  height: inherit;
   position: absolute;
   background: #100;
   opacity: 0.8;
@@ -253,6 +277,22 @@ table {
 .slider__slide .info .year {
   color: #ffc72e;
   font-size: 10px;
+}
+.slider__slide .content {
+  background-color: #100;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 400px;
+  padding: 10px;
+  gap: 10px;
+}
+.slider__slide .content .name {
+  color: #ffc72e;
+}
+.slider__slide .content .year {
+  font-style: italic;
 }
 .slider__slide:hover .info {
   bottom: 2px;
@@ -667,6 +707,27 @@ footer #social-icons li {
   background: #f5780c;
   color: white;
   padding: 10px;
+}
+
+.aboutus-page main {
+  gap: 25px;
+}
+.aboutus-page .banner {
+  height: 100px;
+  background-color: blanchedalmond;
+  width: 100%;
+}
+.aboutus-page p {
+  max-width: 80%;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-align: justify;
+}
+.aboutus-page p img.left {
+  float: left;
+}
+.aboutus-page p img.right {
+  float: right;
 }
 
 @media screen and (max-width: 768px) {

@@ -31,237 +31,38 @@
 				</div>
 			</header>
 			<main class="content-centered flex flex-col gap-40">
+				<!-- slider of news -->
+				<section>
+					<h2>Latest News in CineMe</h2>
+					<div id="image-slider" class="slider" data-slidesToShow="1" data-height="300px" data-theme="clean">
+						<div class="slider__track flex">
+							<ul class="slider__list flex" id="news"></ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- slider of actors -->
 				<section>
 					<h2>Armenians in Cinema</h2>
-
-					<div id="image-slider" class="slider">
+					<div id="image-slider" class="slider" data-slidesToShow="5" data-theme="clean">
 						<div class="slider__track flex">
-							<ul class="slider__list flex">
-								<li class="slider__slide horizontal">
-									<a href="single-prof.html">
-										<div class="image-container">
-											<img src="src/img/People/Sev+RESIZED.png" />
-										</div>
-
-										<div class="info">
-											<span class="name">Sev Ohanian</span>
-											<span class="profession">Director</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide horizontal">
-									<a href="single-prof.html">
-										<div class="image-container">
-											<img src="src/img/People/1140-cher.jpg" />
-										</div>
-
-										<div class="info">
-											<span class="name">Cher</span>
-											<span class="profession">Actress Singer</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide horizontal">
-									<a href="single-prof.html">
-										<div class="image-container">
-											<img src="src/img/People/ericbogosian.jpg" />
-										</div>
-
-										<div class="info">
-											<span class="name">Eric Bogosian</span>
-											<span class="profession">Actor</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide horizontal">
-									<a href="single-prof.html">
-										<div class="image-container">
-											<img src="src/img/People/angelasarafyan.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Angela Sarafyan</span>
-											<span class="profession">Actress</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide horizontal">
-									<a href="single-prof.html">
-										<div class="image-container">
-											<img src="src/img/People/cosmojarvis.webp" />
-										</div>
-
-										<div class="info">
-											<span class="name">Cosmo Jarvis</span>
-											<span class="profession">Actor</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide horizontal">
-									<a href="single-prof.html">
-										<div class="image-container">
-											<img src="src/img/People/hovikkeuchkerian.jpg" />
-										</div>
-
-										<div class="info">
-											<span class="name">Hovik Keuchkerian</span>
-											<span class="profession">Actor</span>
-										</div>
-									</a>
-								</li>
-							</ul>
+							<ul class="slider__list flex" id="actors"></ul>
 						</div>
 					</div>
 				</section>
 
+				<!-- cards of professions -->
 				<section class="paleorangebg orangeborder">
-					<h2>Armenians in Cinema</h2>
-					<div class="flex flex-wrap flex-center gap-20 category-container">
-						<div class="cat-card">
-							<a href="category.html">
-								<img src="src/img/Professions/director.png" />
-								<h3>Director</h3>
-							</a>
-						</div>
-						<div class="cat-card">
-							<a href="category.html">
-								<img src="src/img/Professions/actor.png" />
-								<h3>Actor</h3>
-							</a>
-						</div>
-						<div class="cat-card">
-							<a href="category.html">
-								<img src="src/img/Professions/camera-operator.png" />
-								<h3>Operator</h3>
-							</a>
-						</div>
-						<div class="cat-card">
-							<a href="category.html">
-								<img src="src/img/Professions/producer.png" />
-								<h3>Producer</h3>
-							</a>
-						</div>
-						<div class="cat-card">
-							<a href="category.html">
-								<img src="src/img/Professions/make-up-artist.png" />
-								<h3>Make-up Artist</h3>
-							</a>
-						</div>
-						<div class="cat-card">
-							<a href="category.html">
-								<img src="src/img/Professions/fashion-designer.png" />
-								<h3>Fashion Designer</h3>
-							</a>
-						</div>
-					</div>
+					<h2>Top Professions</h2>
+					<div class="flex flex-wrap flex-center gap-20 category-container" id="professions"></div>
 				</section>
 
+				<!-- slider of movies -->
 				<section>
 					<h2>Top Movies</h2>
 					<div id="movies-slider" class="slider" data-slidesToShow="6">
 						<div class="slider__track flex">
-							<ul class="slider__list flex">
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/lordoftherings.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Lord of the rings</span>
-											<span class="year">1997</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/titanic.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Titanic</span>
-											<span class="year">1997</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/killbill.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Kill Bill</span>
-											<span class="year">2003</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/harrypotter.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Harry Potter</span>
-											<span class="year">2003</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/prettywoman.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Pretty Woman</span>
-											<span class="year">2003</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/starwars.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Star Wars</span>
-											<span class="year">2003</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/wicked.jpg" />
-										</div>
-										<div class="info">
-											<span class="name">Wicked</span>
-											<span class="year">2024</span>
-										</div>
-									</a>
-								</li>
-
-								<li class="slider__slide vertical">
-									<a href="single-movie.html">
-										<div class="image-container">
-											<img src="src/img/Movies/fastandfurious.jpg" />
-										</div>
-
-										<div class="info">
-											<span class="name">Fast & Furious</span>
-											<span class="year">2003</span>
-										</div>
-									</a>
-								</li>
-							</ul>
+							<ul class="slider__list flex" id="movies"></ul>
 						</div>
 					</div>
 				</section>
@@ -274,9 +75,9 @@
 				<ul class="flex flex-row gap-60">
 					<li>
 						<ul>
-							<li><a href="">About us</a></li>
-							<li><a href="">Privacy Policy</a></li>
-							<li><a href="">Terms and Conditions</a></li>
+							<li><a href="/aboutus.html">About us</a></li>
+							<li><a href="/pp.html">Privacy Policy</a></li>
+							<li><a href="/tc.html">Terms and Conditions</a></li>
 						</ul>
 					</li>
 					<li>
@@ -307,5 +108,7 @@
 			</footer>
 		</div>
 		<script src="src/js/slider.js"></script>
+
+		<script src="src/js/index.js"></script>
 	</body>
 </html>
