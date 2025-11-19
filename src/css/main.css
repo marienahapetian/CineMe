@@ -572,6 +572,11 @@ footer #social-icons li {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: all 0.2s linear;
+}
+.category-page .content-sidebar .content section:first-child > a:hover img,
+.category-page .content-sidebar .content section:first-child > div:hover img {
+  transform: scale(1.1);
 }
 .category-page .content-sidebar .content section:first-child > a span,
 .category-page .content-sidebar .content section:first-child > div span {
