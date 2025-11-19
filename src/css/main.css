@@ -770,45 +770,44 @@ footer #social-icons li {
   float: right;
 }
 
-#news {
+.news-page #news-list {
   padding: 0 25px;
   gap: 30px;
 }
-#news > a {
+.news-page #news-list > a {
   display: flex;
   gap: 15px;
   padding: 15px;
 }
-#news > a:nth-child(2n+1) {
+.news-page #news-list > a:nth-child(2n+1) {
   background-color: #fff6ec;
 }
-#news > a > :first-child {
+.news-page #news-list > a > :first-child {
   width: 150px;
 }
-#news > a > :last-child {
+.news-page #news-list > a > :last-child {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
 }
-#news > a:hover {
+.news-page #news-list > a:hover {
   text-decoration: none;
 }
-#news > a h3 {
+.news-page #news-list > a h3 {
   font-weight: 500;
 }
-#news > a i {
+.news-page #news-list > a i {
   text-align: right;
   font-size: 12px;
 }
-
 .news-page #title {
   width: 70%;
   margin: 0 auto;
   line-height: 1.2;
 }
-.news-page .content {
+.news-page.single .content {
   display: flex;
   gap: 15px;
   padding: 0 40px;

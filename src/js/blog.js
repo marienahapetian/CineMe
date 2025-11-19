@@ -27,7 +27,7 @@ async function displayContent() {
 			)}...</p><i>Date: ${newsS.date}</i></div></a>`;
 		});
 
-		document.getElementById("news").innerHTML = html;
+		document.getElementById("news-list").innerHTML = html;
 	} catch (err) {
 		console.log(err);
 	}
