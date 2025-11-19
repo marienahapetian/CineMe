@@ -105,9 +105,3 @@ class Lightbox {
 		this.openPopup();
 	}
 }
-
-let galleries = document.querySelectorAll(".gallery");
-
-galleries.forEach((gallery) => {
-	let galleryObj = new Lightbox(gallery);
-});

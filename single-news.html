@@ -7,13 +7,11 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="src/css/main.css" />
-		<script defer src="src/js/Pagination.js"></script>
-		<script defer src="src/js/category.js"></script>
 		<script defer src="src/js/parts.js"></script>
-
+		<script defer src="src/js/single-news.js"></script>
 		<title>CineMe</title>
 	</head>
-	<body class="category-page">
+	<body class="news-page">
 		<div class="main-container">
 			<header>
 				<a href="" class="hide-desktop mobile-menu-trigger"></a>
@@ -22,10 +20,11 @@
 					<span>CineMe</span>
 				</a>
 				<ul class="flex flex-row hide-mobile" id="primary-nav">
-					<li><a href="category.html" class="current">Professions</a></li>
+					<li><a href="category.html">Professions</a></li>
+
 					<li><a href="movies.html">Movies</a></li>
 					<li><a href="profs.html">Specialists</a></li>
-					<li><a href="blog.html">News</a></li>
+					<li><a href="blog.html" class="current">News</a></li>
 				</ul>
 				<div class="flex gap-10">
 					<span><input type="text" class="searchbox" placeholder="Search" /></span>
@@ -36,17 +35,19 @@
 			</header>
 
 			<main class="flex flex-col gap-40">
-				<h2 class="text-center">Professions</h2>
-				<div class="content-sidebar">
-					<div class="content">
-						<section class="flex flex-wrap professions" id="category-items"></section>
-						<section class="text-center" id="pagination-container"></section>
+				<h2 class="text-center" id="title"></h2>
+
+				<span class="text-center">Date: <i id="date"></i></span>
+
+				<div class="content">
+					<div class="main-img">
+						<img src="" />
 					</div>
+					<p id="content"></p>
 				</div>
 			</main>
 
 			<footer></footer>
 		</div>
-		<script src="src/js/checkbox.js"></script>
 	</body>
 </html>

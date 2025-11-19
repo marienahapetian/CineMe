@@ -8,6 +8,10 @@
 		<link href="https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="src/css/main.css" />
+		<script defer src="src/js/Lightbox.js"></script>
+		<script defer src="src/js/background.js"></script>
+		<script defer src="src/js/single-prof.js"></script>
+		<script defer src="src/js/parts.js"></script>
 		<title>CineMe</title>
 	</head>
 	<body class="single-page">
@@ -20,9 +24,10 @@
 				</a>
 				<ul class="flex flex-row hide-mobile" id="primary-nav">
 					<li><a href="category.html">Professions</a></li>
-					<li><a href="category.html">Movies</a></li>
-					<li><a href="category.html">Specialists</a></li>
-					<li><a href="category.html">Awards</a></li>
+
+					<li><a href="movies.html">Movies</a></li>
+					<li><a href="profs.html">Specialists</a></li>
+					<li><a href="profs.html">Awards</a></li>
 				</ul>
 				<div class="flex gap-10">
 					<span><input type="text" class="searchbox" placeholder="Search" /></span>
@@ -36,21 +41,13 @@
 				<section class="flex">
 					<div class="left-content column">
 						<div class="main-img">
-							<img src="/src/img/People/hovikkeuchkerian.jpg" />
+							<img src="" />
 						</div>
-						<div class="gallery flex flex-wrap gap-10 flex-stretch">
-							<span class="image-container">
-								<img src="src/img/People/Hovik Keuchkerian/0729540.jpg" />
-							</span>
-							<span class="image-container"><img src="src/img/People/Hovik Keuchkerian/19733810.jpg" /></span>
-							<span class="image-container"><img src="src/img/People/Hovik Keuchkerian/291829969_767014584735920_5066047850924838508_n-1.jpg" /></span>
-							<span class="image-container"><img src="src/img/People/Hovik Keuchkerian/e786d8ba1e4e2d60159e373a7950a5a0.jpg" /></span>
-							<span class="image-container"><img src="src/img/People/Hovik Keuchkerian/GZrnIJvW4AI50bb.jpg" /></span>
-							<span class="image-container"><img src="src/img/People/Hovik Keuchkerian/hoivk-principal-k41C-U2101607793979BcE-1248x1248@MujerHoy.jpg" /></span>
-						</div>
+						<div class="gallery flex flex-wrap gap-10 flex-stretch"></div>
 					</div>
+
 					<div class="right-content column flex flex-col gap-10">
-						<h3>Hovik Kheuchkerian</h3>
+						<h3 id="name"></h3>
 						<div class="reviewscount">
 							<span class="fa fa-star checked"></span>
 							<span class="fa fa-star checked"></span>
@@ -60,34 +57,13 @@
 							14 Reviews
 						</div>
 						<h4>Actor Producer TV Host</h4>
-						<h4>Born: 14 Nov 1972 (52 yo)</h4>
+						<h4 id="birthdate">Born: 14 Nov 1972 (52 yo)</h4>
 
 						<table>
 							<thead>
 								<td colspan="3">Filmography</td>
 							</thead>
-							<tbody>
-								<tr>
-									<td><a href="single-movie.html">Platform</a></td>
-									<td>Actor</td>
-									<td>2024</td>
-								</tr>
-								<tr>
-									<td><a href="single-movie.html">Amerikatsi</a></td>
-									<td>Actor</td>
-									<td>2022</td>
-								</tr>
-								<tr>
-									<td><a href="single-movie.html">Money Heist</a></td>
-									<td>Actor</td>
-									<td>2019-2021</td>
-								</tr>
-								<tr>
-									<td><a href="single-movie.html">Assasin’s Creed</a></td>
-									<td>Actor</td>
-									<td>2016</td>
-								</tr>
-							</tbody>
+							<tbody id="movies"></tbody>
 						</table>
 					</div>
 				</section>
@@ -121,47 +97,7 @@
 				</section>
 			</main>
 
-			<footer>
-				<a href="" class="logo" aria-label="Go to Main Page">
-					<img src="src/img/logo.png" />
-					<span>CineMe</span>
-				</a>
-				<ul class="flex flex-row gap-60">
-					<li>
-						<ul>
-							<li><a href="/aboutus.html">About us</a></li>
-							<li><a href="/pp.html">Privacy Policy</a></li>
-							<li><a href="/tc.html">Terms and Conditions</a></li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li><a href="">TV Shows</a></li>
-							<li><a href="">Movies</a></li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li><a href="">Contact Us</a></li>
-						</ul>
-					</li>
-				</ul>
-				<div class="flex gap-10" id="social-icons">
-					<ul class="flex flex-col flex-row-mobile gap-15">
-						<li>
-							<a href=""><img src="src/img/Social Networks/facebook-app-symbol.png" /></a>
-						</li>
-						<li>
-							<a href=""><img src="src/img/Social Networks/instagram.png" /></a>
-						</li>
-						<li>
-							<a href=""><img src="src/img/Social Networks/twitter(1).png" /></a>
-						</li>
-					</ul>
-				</div>
-			</footer>
+			<footer></footer>
 		</div>
-		<script src="src/js/lightbox.js"></script>
-		<script src="src/js/background.js"></script>
 	</body>
 </html>

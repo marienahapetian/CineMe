@@ -11,7 +11,9 @@ fetch("/public/data.json")
 		actors.forEach((actor) => {
 			actorsHtml +=
 				'<li class="slider__slide horizontal">' +
-				'<a href="single-prof.html">' +
+				'<a href="single-prof.html?id=' +
+				actor.id +
+				'">' +
 				'<div class="image-container">' +
 				'<img src="' +
 				actor.image +
@@ -34,7 +36,9 @@ fetch("/public/data.json")
 		movies.forEach((movie) => {
 			moviesHtml +=
 				'<li class="slider__slide vertical">' +
-				'<a href="single-movie.html">' +
+				'<a href="single-movie.html?id=' +
+				movie.id +
+				'">' +
 				'<div class="image-container">' +
 				'<img src="' +
 				movie.image +
@@ -87,7 +91,7 @@ fetch("/public/data.json")
 		// add profession cards
 		let professionsHtml = "";
 		professions.forEach((prof) => {
-			professionsHtml += '<div class="cat-card">' + '<a href="category.html">' + '<img src="' + prof.image + '" />' + "<h3>" + prof.name + "</h3>" + "</a>" + "</div>";
+			professionsHtml += '<div class="cat-card">' + '<a href="profs.html">' + '<img src="' + prof.image + '" />' + "<h3>" + prof.name + "</h3>" + "</a>" + "</div>";
 		});
 
 		document.getElementById("professions").innerHTML = professionsHtml;
@@ -100,7 +104,8 @@ fetch("/public/data.json")
 			let visibleCount = 4;
 			if (slider.getAttribute("data-slidesToShow")) visibleCount = parseInt(slider.getAttribute("data-slidesToShow"));
 
-			let sliderObj = new Slider(slider, visibleCount);
+			let sliderHeight = slider.dataset.height ? slider.dataset.height : 300;
+			let sliderObj = new Slider(slider, visibleCount, sliderHeight);
 
 			//setInterval(sliderObj.animateLeft.bind(sliderObj), 5000);
 			//sliderObj.animate();

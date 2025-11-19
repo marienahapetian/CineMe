@@ -1,117 +1,215 @@
 {
 	"actors": [
 		{
+			"id": 1,
 			"name": "Sev Ohanian",
+			"birth": "25 Nov 1985",
 			"profession": "Director",
-			"image": "/src/img/People/Sev+RESIZED.png"
+			"image": "/src/img/People/Sev+RESIZED.png",
+			"thumbs": ["/src/img/People/sev/thumb1.avif", "/src/img/People/sev/thumb2.jpg", "/src/img/People/sev/thumb3.jpeg"],
+			"movies": [1, 10]
 		},
 		{
+			"id": 2,
 			"name": "Cher",
+			"birth": "20 May 1946",
 			"profession": "Actress Singer",
-			"image": "/src/img/People/1140-cher.jpg"
+			"image": "/src/img/People/1140-cher.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg", "/src/img/People/cher/thumb2.jpg", "/src/img/People/cher/thumb3.jpg"],
+			"movies": [11, 12]
 		},
 		{
+			"id": 3,
 			"name": "Eric Bogosian",
+			"birth": "24 Apr 1953",
 			"profession": "Actor",
-			"image": "/src/img/People/ericbogosian.jpg"
+			"image": "/src/img/People/ericbogosian.jpg",
+			"thumbs": ["/src/img/People/eric/thumb1.jpg", "/src/img/People/eric/thumb2.jpeg", "/src/img/People/eric/thumb3.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 4,
 			"name": "Angela Sarafyan",
+			"birth": "14 Nov 1972",
 			"profession": "Actress",
-			"image": "/src/img/People/angelasarafyan.jpg"
+			"image": "/src/img/People/angelasarafyan.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 5,
 			"name": "Cosmo Jarvis",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/cosmojarvis.webp"
+			"image": "/src/img/People/cosmojarvis.webp",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 6,
 			"name": "Hovik Keuchkerian",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/hovikkeuchkerian.jpg"
+			"image": "/src/img/People/hovikkeuchkerian.jpg",
+			"thumbs": [
+				"/src/img/People/hovik/thumb1.jpg",
+				"/src/img/People/hovik/thumb2.jpg",
+				"/src/img/People/hovik/thumb3.jpg",
+				"/src/img/People/hovik/thumb4.jpg",
+				"/src/img/People/hovik/thumb5.jpg",
+				"/src/img/People/hovik/thumb6.jpg"
+			],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 7,
 			"name": "Edgar Damatian",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/edgarmadatian.jpg"
+			"image": "/src/img/People/edgarmadatian.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 8,
 			"name": "Karen Karagulian",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/KarenKaragulian.jpg"
+			"image": "/src/img/People/KarenKaragulian.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 9,
 			"name": "Rowan Blanchard",
+			"birth": "14 Nov 1972",
 			"profession": "Actress",
-			"image": "/src/img/People/rowanblanchard.jpg"
+			"image": "/src/img/People/rowanblanchard.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 10,
 			"name": "Marco Khanlian",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/marcokhanlian.jpg"
+			"image": "/src/img/People/marcokhanlian.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 11,
 			"name": "Andy Serkis",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/andyserkis.jpg"
+			"image": "/src/img/People/andyserkis.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
+			"id": 12,
 			"name": "Charlez Aznavour",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/aznavour.jpg"
+			"image": "/src/img/People/aznavour.jpg",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		},
 		{
-			"name": "Marco Khanlian",
-			"profession": "Actor",
-			"image": "/src/img/People/marcokhanlian.jpg"
-		},
-		{
+			"id": 13,
 			"name": "Joe Manganiello",
+			"birth": "14 Nov 1972",
 			"profession": "Actor",
-			"image": "/src/img/People/joemanganiello.png"
+			"image": "/src/img/People/joemanganiello.png",
+			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
+			"movies": [1, 5, 8]
 		}
 	],
 
 	"movies": [
 		{
+			"id": 1,
+			"name": "Amerikatsi",
+			"image": "/src/img/Movies/amerikatsi.jpg",
+			"year": "2022",
+			"thumbs": ["/src/img/Movies/amerikatsi/thumb1.webp", "/src/img/Movies/amerikatsi/thumb2.jpg", "/src/img/Movies/amerikatsi/thumb3.jpg"]
+		},
+		{
+			"id": 2,
 			"name": "Lord of the rings",
 			"image": "/src/img/Movies/lordoftherings.jpg",
-			"year": "1997"
+			"year": "1997",
+			"thumbs": []
 		},
 		{
+			"id": 3,
 			"name": "Titanic",
 			"image": "/src/img/Movies/titanic.jpg",
-			"year": "1997"
+			"year": "1997",
+			"thumbs": []
 		},
 		{
+			"id": 4,
 			"name": "Kill Bill",
 			"image": "/src/img/Movies/killbill.jpg",
-			"year": "2003"
+			"year": "2003",
+			"thumbs": []
 		},
 		{
+			"id": 5,
 			"name": "Harry Potter",
 			"image": "/src/img/Movies/harrypotter.jpg",
-			"year": "2003"
+			"year": "2003",
+			"thumbs": []
 		},
 		{
+			"id": 6,
 			"name": "Pretty Woman",
 			"image": "/src/img/Movies/prettywoman.jpg",
-			"year": "2003"
+			"year": "2003",
+			"thumbs": []
 		},
 		{
+			"id": 7,
 			"name": "Star Wars",
 			"image": "/src/img/Movies/starwars.jpg",
-			"year": "2003"
+			"year": "2003",
+			"thumbs": []
 		},
 		{
+			"id": 8,
 			"name": "Wicked",
 			"image": "/src/img/Movies/wicked.jpg",
-			"year": "2024"
+			"year": "2024",
+			"thumbs": []
 		},
 		{
+			"id": 9,
 			"name": "Fast & Furious",
 			"image": "/src/img/Movies/fastandfurious.jpg",
-			"year": "2003"
+			"year": "2003",
+			"thumbs": []
+		},
+		{
+			"id": 10,
+			"name": "Sinners",
+			"image": "/src/img/Movies/sinners.jpg",
+			"year": "2024",
+			"thumbs": []
+		},
+		{
+			"id": 11,
+			"name": "Burlesque",
+			"image": "/src/img/Movies/burlesque.jpg",
+			"year": "2010",
+			"thumbs": []
+		},
+		{
+			"id": 12,
+			"name": "Moonstruck",
+			"image": "/src/img/Movies/moonstruck.jpg",
+			"year": "1987",
+			"thumbs": []
 		}
 	],
 	"professions": [
@@ -142,28 +240,39 @@
 	],
 	"news": [
 		{
+			"id": 1,
 			"title": "Box Office: ‘Now You See Me 3’ Makes $2.1 Million in Previews, Beating ‘Running Man’ With $1.9 Million",
 			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
 			"image": "/src/img/news/nowyouseeme.jpg",
 			"date": "2025-11-10"
 		},
 		{
+			"id": 2,
 			"title": "'Wicked: For Good' Is Fandango's Biggest PG Pre-Seller Of All Time & Highest Overall For 2025 – Box Office",
 			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
 			"image": "/src/img/news/wicked.jpeg",
 			"date": "2025-11-10"
 		},
 		{
+			"id": 3,
 			"title": "Nicolas Cage to Reunite With John Woo for ‘Gambino’ Mafia Boss Biopic",
 			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
 			"image": "/src/img/news/gambino.jpg",
 			"date": "2025-11-10"
 		},
 		{
+			"id": 4,
 			"title": "Netflix's In Your Dreams Is The Best Pixar Movie They Never Made",
 			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
 			"image": "/src/img/news/inyourdreams.jpg",
 			"date": "2025-11-10"
+		},
+		{
+			"id": 5,
+			"title": "MCU’s X-Men Movie Will Reportedly Replace Wolverine With A New Main Character",
+			"content": "Donec eu luctus risus. Suspendisse pharetra fringilla tortor ut bibendum. Nunc tincidunt aliquet dui a consectetur. Phasellus elementum, metus sed cursus accumsan, magna velit hendrerit erat, nec pharetra tortor felis nec nunc. Nam libero purus, congue quis maximus et, viverra quis turpis. Mauris et augue risus. Fusce sodales purus vel purus varius, et porta metus suscipit. ",
+			"image": "/src/img/news/xmen.jpg",
+			"date": "2025-11-19"
 		}
 	]
 }

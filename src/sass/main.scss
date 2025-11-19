@@ -6,6 +6,7 @@
 @import "constants";
 @import "lightbox";
 @import "slider";
+@import "pagination";
 @import "mixins"; // it uses colors so should be after colors
 
 @media screen and (min-width: 768px) {
@@ -91,12 +92,16 @@ header {
 		li a {
 			display: inline-block;
 			background: $orange;
-			color: $white;
+			color: $deepred;
 			padding: 3px 20px;
 			box-shadow: 0px 0px $paleorange;
 			border-radius: $smallBorderRadius;
 			font-size: 14px;
 			font-weight: 500;
+
+			&.current {
+				background: $mainyellow;
+			}
 		}
 	}
 
@@ -224,7 +229,8 @@ footer {
 				row-gap: 25px;
 				column-gap: 15px;
 
-				a {
+				> a,
+				> div {
 					width: 180px;
 					height: 200px;
 					overflow: hidden;
@@ -240,6 +246,7 @@ footer {
 					span {
 						position: absolute;
 						bottom: 0;
+						left: 0;
 						display: block;
 						width: 100%;
 						background-color: $blackred;
@@ -250,13 +257,42 @@ footer {
 						font-size: 14px;
 						border-top: 1px solid $mainyellow;
 					}
+
+					i {
+						position: absolute;
+						top: 5px;
+						right: 5px;
+						background: $mainyellow;
+						padding: 2px 5px;
+						font-size: 14px;
+						font-weight: 500;
+					}
+				}
+
+				&.professions > a {
+					width: 300px;
+					background: $beige;
+					padding: $normalPadding;
+					box-shadow: none;
+
+					img {
+						object-fit: contain;
+						transition: all linear 0.5s;
+					}
+
+					&:hover img {
+						transform: rotateY(180deg);
+					}
+				}
+				> div {
+					height: 270px;
 				}
 			}
 
 			section:last-child {
-				a {
-					@include button-style();
-				}
+				// a {
+				// 	@include button-style();
+				// }
 			}
 		}
 	}
@@ -449,6 +485,59 @@ footer {
 		}
 	}
 }
+
+#news {
+	padding: 0 $bigPadding;
+	gap: 30px;
+	> a {
+		display: flex;
+		gap: $normalPadding;
+		padding: $normalPadding;
+
+		&:nth-child(2n + 1) {
+			background-color: $palebeige;
+		}
+
+		> :first-child {
+			width: 150px;
+		}
+
+		> :last-child {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 10px;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		h3 {
+			font-weight: 500;
+		}
+
+		i {
+			text-align: right;
+			font-size: 12px;
+		}
+	}
+}
+
+.news-page {
+	#title {
+		width: 70%;
+		margin: 0 auto;
+		line-height: 1.2;
+	}
+	.content {
+		display: flex;
+		gap: $normalPadding;
+		padding: 0 $hugePadding;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	header,
 	footer {

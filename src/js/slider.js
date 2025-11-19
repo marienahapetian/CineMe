@@ -1,8 +1,9 @@
 class Slider {
-	constructor(sliderCont, visibleCount = 4) {
+	constructor(sliderCont, visibleCount = 4, height = 300) {
 		this.sliderContainer = sliderCont;
 		this.visibleCount = visibleCount;
 		this.hasLines = this.sliderContainer.dataset.lines ? this.sliderContainer.dataset.lines : false;
+		this.sliderHeight = height;
 
 		this.initiateTrack();
 
@@ -72,6 +73,7 @@ class Slider {
 	}
 
 	initiateTrack() {
+		this.sliderContainer.style.height = this.sliderHeight + "px";
 		let sliderTrackA = Array.from(this.sliderContainer.childNodes).filter((child) => child.className?.includes("slider__track"));
 		this.sliderTrack = sliderTrackA[0];
 		let sliderListA = Array.from(this.sliderTrack.childNodes).filter((child) => child.className?.includes("slider__list"));

@@ -190,6 +190,7 @@ table {
 
 .slider__track {
   overflow: hidden;
+  height: 100%;
 }
 .slider__track ul {
   position: relative;
@@ -238,7 +239,7 @@ table {
   position: relative;
 }
 .slider__slide > a {
-  height: inherit;
+  height: 100%;
 }
 .slider__slide .image-container {
   border-radius: 0px;
@@ -254,7 +255,6 @@ table {
   border-top-right-radius: -4px;
 }
 .slider__slide .info {
-  height: inherit;
   position: absolute;
   background: #100;
   opacity: 0.8;
@@ -304,6 +304,23 @@ table {
 
 .slider__slide.vertical .image-container {
   height: 100%;
+}
+
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+ul.pagination li a {
+  padding: 2px 5px;
+  font-size: 16px;
+  border-radius: 0;
+  background-color: #eee;
+  color: #0d1243;
+}
+ul.pagination li.current a {
+  background-color: #f5780c;
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -405,12 +422,15 @@ header ul {
 header ul li a {
   display: inline-block;
   background: #f5780c;
-  color: white;
+  color: #1e0203;
   padding: 3px 20px;
   box-shadow: 0px 0px #fff6ec;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 500;
+}
+header ul li a.current {
+  background: #ffc72e;
 }
 header input.searchbox,
 header a.useraccount {
@@ -539,21 +559,25 @@ footer #social-icons li {
   row-gap: 25px;
   column-gap: 15px;
 }
-.category-page .content-sidebar .content section:first-child a {
+.category-page .content-sidebar .content section:first-child > a,
+.category-page .content-sidebar .content section:first-child > div {
   width: 180px;
   height: 200px;
   overflow: hidden;
   position: relative;
   box-shadow: 0px 5px 10px 0px #0d1243;
 }
-.category-page .content-sidebar .content section:first-child a img {
+.category-page .content-sidebar .content section:first-child > a img,
+.category-page .content-sidebar .content section:first-child > div img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.category-page .content-sidebar .content section:first-child a span {
+.category-page .content-sidebar .content section:first-child > a span,
+.category-page .content-sidebar .content section:first-child > div span {
   position: absolute;
   bottom: 0;
+  left: 0;
   display: block;
   width: 100%;
   background-color: #100;
@@ -564,16 +588,32 @@ footer #social-icons li {
   font-size: 14px;
   border-top: 1px solid #ffc72e;
 }
-.category-page .content-sidebar .content section:last-child a {
-  border-radius: 15px;
-  padding: 10px 24px;
-  font-size: 20px;
-  font-family: jua;
-  border: 5px solid #f5780c;
-  background-color: white;
-  color: #0d1243;
+.category-page .content-sidebar .content section:first-child > a i,
+.category-page .content-sidebar .content section:first-child > div i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ffc72e;
+  padding: 2px 5px;
+  font-size: 14px;
+  font-weight: 500;
 }
-
+.category-page .content-sidebar .content section:first-child.professions > a {
+  width: 300px;
+  background: #fdebcb;
+  padding: 15px;
+  box-shadow: none;
+}
+.category-page .content-sidebar .content section:first-child.professions > a img {
+  object-fit: contain;
+  transition: all linear 0.5s;
+}
+.category-page .content-sidebar .content section:first-child.professions > a:hover img {
+  transform: rotateY(180deg);
+}
+.category-page .content-sidebar .content section:first-child > div {
+  height: 270px;
+}
 .single-page main {
   align-items: center;
 }
@@ -728,6 +768,50 @@ footer #social-icons li {
 }
 .aboutus-page p img.right {
   float: right;
+}
+
+#news {
+  padding: 0 25px;
+  gap: 30px;
+}
+#news > a {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+#news > a:nth-child(2n+1) {
+  background-color: #fff6ec;
+}
+#news > a > :first-child {
+  width: 150px;
+}
+#news > a > :last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+#news > a:hover {
+  text-decoration: none;
+}
+#news > a h3 {
+  font-weight: 500;
+}
+#news > a i {
+  text-align: right;
+  font-size: 12px;
+}
+
+.news-page #title {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+.news-page .content {
+  display: flex;
+  gap: 15px;
+  padding: 0 40px;
 }
 
 @media screen and (max-width: 768px) {
