@@ -4,7 +4,7 @@ fetch("/public/data.json")
 		actors = data.actors;
 		movies = data.movies;
 		professions = data.professions;
-		news = data.news;
+		news = data.news.reverse();
 
 		// add actors slider items
 		let actorsHtml = "";

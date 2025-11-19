@@ -13,7 +13,7 @@ async function displayContent() {
 
 		const data = await response.json();
 
-		let news = data.news;
+		let news = data.news.reverse();
 
 		let pagination = new Pagination(news, perPage, page);
 		pagination.create();
