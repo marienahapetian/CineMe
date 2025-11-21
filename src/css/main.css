@@ -758,25 +758,69 @@ footer #social-icons li {
   padding: 10px;
 }
 
-.aboutus-page main {
+.aboutus-page main,
+.contactus-page main {
   gap: 25px;
 }
-.aboutus-page .banner {
+.aboutus-page .banner,
+.contactus-page .banner {
   height: 100px;
-  background-color: blanchedalmond;
+  background-color: #fff6ec;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
-.aboutus-page p {
+.aboutus-page p,
+.contactus-page p {
   max-width: 80%;
   letter-spacing: 1px;
   line-height: 1.2;
   text-align: justify;
 }
-.aboutus-page p img.left {
+.aboutus-page p img.left,
+.contactus-page p img.left {
   float: left;
 }
-.aboutus-page p img.right {
+.aboutus-page p img.right,
+.contactus-page p img.right {
   float: right;
+}
+.aboutus-page .content,
+.contactus-page .content {
+  width: 100%;
+}
+.aboutus-page .content form,
+.contactus-page .content form {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+.aboutus-page .content form input,
+.aboutus-page .content form select,
+.aboutus-page .content form textarea,
+.contactus-page .content form input,
+.contactus-page .content form select,
+.contactus-page .content form textarea {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+.aboutus-page .content form button,
+.contactus-page .content form button {
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #f5780c;
+  color: white;
+}
+
+.aboutus-page .banner {
+  background-image: url("/src/img/icons/movie.png");
+}
+
+.contactus-page .banner {
+  background-image: url("/src/img/icons/email.png");
 }
 
 .news-page #news-list {

@@ -473,14 +473,19 @@ footer {
 	}
 }
 
-.aboutus-page {
+.aboutus-page,
+.contactus-page {
 	main {
 		gap: $bigPadding;
 	}
 	.banner {
 		height: 100px;
-		background-color: blanchedalmond;
+		background-color: $palebeige;
 		width: 100%;
+
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 	}
 
 	p {
@@ -495,6 +500,39 @@ footer {
 		img.right {
 			float: right;
 		}
+	}
+
+	.content {
+		width: 100%;
+
+		form {
+			width: 100%;
+			max-width: 400px;
+			text-align: left;
+
+			input,
+			select,
+			textarea {
+				padding: $smallPadding $normalPadding;
+				border-radius: $smallBorderRadius;
+				border: 1px solid $lightgrey;
+			}
+
+			button {
+				@include button-style1;
+			}
+		}
+	}
+}
+
+.aboutus-page {
+	.banner {
+		background-image: url("/src/img/icons/movie.png");
+	}
+}
+.contactus-page {
+	.banner {
+		background-image: url("/src/img/icons/email.png");
 	}
 }
 

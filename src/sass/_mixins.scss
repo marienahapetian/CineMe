@@ -28,6 +28,20 @@
 	}
 }
 
+@mixin button-style1($light-theme: true) {
+	border-radius: $smallBorderRadius;
+	padding: $smallPadding $normalPadding;
+	font-size: 16px;
+	@if $light-theme {
+		background-color: $orange;
+		color: $white;
+	} @else {
+		border: none;
+		background-color: $primaryred;
+		color: $white;
+	}
+}
+
 @mixin logo {
 	.logo {
 		height: 80px;
