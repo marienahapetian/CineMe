@@ -123,6 +123,26 @@
 			"image": "/src/img/People/joemanganiello.png",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
 			"movies": [1, 5, 8]
+		},
+		{
+			"id": 14,
+			"name": "Adam Sevani",
+			"birth": "19 Jun 1992",
+			"profession": "Actor Dancer",
+			"image": "/src/img/People/adam/main.jpg",
+			"thumbs": ["/src/img/People/adam/thumb1.webp", "/src/img/People/adam/thumb2.jpg", "/src/img/People/adam/thumb3.jpeg"],
+			"movies": [13, 14],
+			"shows": [
+				{
+					"id": 1,
+					"episodes": [
+						{
+							"season": 3,
+							"episode": 18
+						}
+					]
+				}
+			]
 		}
 	],
 
@@ -209,6 +229,29 @@
 			"name": "Moonstruck",
 			"image": "/src/img/Movies/moonstruck.jpg",
 			"year": "1987",
+			"thumbs": []
+		},
+		{
+			"id": 13,
+			"name": "Step Up 2: The streets",
+			"image": "/src/img/Movies/stepup2/main.jpg",
+			"year": "2008",
+			"thumbs": []
+		},
+		{
+			"id": 14,
+			"name": "Step Up 3D",
+			"image": "/src/img/Movies/stepup3/main.jpeg",
+			"year": "2010",
+			"thumbs": []
+		}
+	],
+	"shows": [
+		{
+			"id": 1,
+			"name": "Lucifer",
+			"image": "/src/img/Shows/lucifer/main.webp",
+			"year": "2016",
 			"thumbs": []
 		}
 	],

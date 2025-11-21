@@ -8,13 +8,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="src/css/main.css" />
-		<script defer src="src/js/Lightbox.js"></script>
-		<script defer src="src/js/background.js"></script>
-		<script defer src="src/js/single-prof.js"></script>
-		<script defer src="src/js/parts.js"></script>
+		<script defer src="/src/js/single-show.js"></script>
+		<script defer src="/src/js/parts.js"></script>
 		<title>CineMe</title>
 	</head>
-	<body class="single-page">
+	<body class="single-page movie-page">
 		<div class="main-container">
 			<header></header>
 
@@ -26,7 +24,6 @@
 						</div>
 						<div class="gallery flex flex-wrap gap-10 flex-stretch"></div>
 					</div>
-
 					<div class="right-content column flex flex-col gap-10">
 						<h3 id="name"></h3>
 						<div class="reviewscount">
@@ -37,21 +34,14 @@
 							<span class="fa fa-star unchecked"></span>
 							14 Reviews
 						</div>
-						<h4>Actor Producer TV Host</h4>
-						<h4 id="birthdate">Born: 14 Nov 1972 (52 yo)</h4>
+						<h4>Series Thriller</h4>
+						<h4>2017 - 2021</h4>
 
 						<table>
 							<thead>
-								<td colspan="3">Filmography</td>
+								<td colspan="3">Actors</td>
 							</thead>
-							<tbody id="movies"></tbody>
-						</table>
-
-						<table>
-							<thead>
-								<td colspan="3">Shows</td>
-							</thead>
-							<tbody id="shows"></tbody>
+							<tbody id="actors"></tbody>
 						</table>
 					</div>
 				</section>
@@ -87,5 +77,7 @@
 
 			<footer></footer>
 		</div>
+		<script src="src/js/Lightbox.js"></script>
+		<script src="src/js/background.js"></script>
 	</body>
 </html>

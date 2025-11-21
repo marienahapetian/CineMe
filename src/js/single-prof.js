@@ -34,8 +34,15 @@ async function displayContent(id) {
 		actor.movies.forEach((movieId) => {
 			let movie = data.movies.find((mov) => mov.id == movieId);
 			let movieRow = document.createElement("tr");
-			movieRow.innerHTML = "<td>" + movie.name + "</td><td>Actor</td><td>" + movie.year + "</td>";
+			movieRow.innerHTML = "<td><a href='single-movie.html?id=" + movie.id + "'>" + movie.name + "</a></td><td>Actor</td><td>" + movie.year + "</td>";
 			document.getElementById("movies").append(movieRow);
+		});
+
+		actor.shows.forEach((showObj) => {
+			let show = data.shows.find((show) => show.id == showObj.id);
+			let showRow = document.createElement("tr");
+			showRow.innerHTML = "<td><a href='single-show.html?id=" + show.id + "'>" + show.name + "</a></td><td>Actor</td><td>" + show.year + "</td>";
+			document.getElementById("shows").append(showRow);
 		});
 
 		document.getElementById("name").textContent = actor.name;

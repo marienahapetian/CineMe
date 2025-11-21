@@ -360,6 +360,10 @@ main section {
   padding-bottom: 40px;
   width: 100%;
 }
+main .main-img img {
+  width: 100%;
+  object-fit: cover;
+}
 main .cat-card a {
   display: flex;
   text-decoration: none;
