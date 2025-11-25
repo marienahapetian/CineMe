@@ -1,10 +1,11 @@
-@import "../reset.scss";
-@import "../flexbox.scss";
-@import "../colors.scss";
-@import "../constants.scss";
-@import "../variables.scss";
-@import "../fonts.scss";
-@import "../mixins.scss"; // it uses colors so should be after colors
+@import "../reset";
+@import "../flexbox";
+@import "../colors";
+@import "../constants";
+@import "../variables";
+@import "../fonts";
+@import "../pagination";
+@import "../mixins"; // it uses colors so should be after colors
 
 body {
 	font-family: $primaryfont;
@@ -30,12 +31,10 @@ aside {
 	nav {
 		font-size: 14px;
 
-		li.active {
+		li a.current {
 			color: $orange;
 
-			a {
-				text-decoration: underline;
-			}
+			text-decoration: underline;
 		}
 		&:last-child {
 			margin-top: auto;

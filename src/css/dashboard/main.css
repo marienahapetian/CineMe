@@ -122,6 +122,28 @@ table {
   font-weight: 400;
   src: url("../fonts/jsMath-cmbx10.ttf") format("ttf");
 }
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+ul.pagination li a {
+  padding: 2px 5px;
+  font-size: 16px;
+  border-radius: 0;
+  background-color: #eee;
+  color: #0d1243;
+}
+ul.pagination li.current a {
+  background-color: #f5780c;
+  color: white;
+}
+
+.dashboard #pagination-container {
+  background: white;
+  padding: 10px;
+}
+
 body {
   font-family: ubuntu;
 }
@@ -164,10 +186,8 @@ aside > *:first-child {
 aside nav {
   font-size: 14px;
 }
-aside nav li.active {
+aside nav li a.current {
   color: #f5780c;
-}
-aside nav li.active a {
   text-decoration: underline;
 }
 aside nav:last-child {

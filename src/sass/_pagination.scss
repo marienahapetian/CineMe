@@ -18,3 +18,10 @@ ul.pagination {
 		}
 	}
 }
+
+.dashboard {
+	#pagination-container {
+		background: $white;
+		padding: $smallPadding;
+	}
+}

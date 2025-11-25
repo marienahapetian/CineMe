@@ -1,7 +1,10 @@
 export class Form {
 	constructor(params) {
-		this.fields = params.fields;
+		this.fields = {};
 		this.id = params.id;
+		this.displayLabel = params.displayLabel != undefined ? params.displayLabel : true;
+
+		console.log(params.displayLabel, this);
 
 		return this.generateForm(params);
 		//this.generateFormFields(params);
@@ -11,7 +14,7 @@ export class Form {
 		let form = document.createElement("form");
 		if (this.id) form.id = params.id;
 
-		this.fields.forEach((field) => {
+		params.fields.forEach((field) => {
 			let fname = "generate" + field.type.charAt(0).toUpperCase() + field.type.slice(1);
 			let inputField;
 			switch (field.type) {
@@ -25,21 +28,33 @@ export class Form {
 			}
 
 			form.appendChild(inputField);
+
+			this.fields[field.title.toLowerCase()] = inputField;
+		});
+
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+			this.submit();
 		});
 
 		return form;
 	}
 
 	generateInputField(field) {
-		let label = document.createElement("label");
-		label.textContent = field.title;
-
 		let input = document.createElement("input");
 		input.type = field.type;
+		input.name = field.title.toLowerCase().replace(" ", "-");
 
-		label.appendChild(input);
+		if (this.displayLabel) {
+			let label = document.createElement("label");
+			label.textContent = field.title;
+			label.appendChild(input);
 
-		return label;
+			return label;
+		} else {
+			input.placeholder = field.title;
+			return input;
+		}
 	}
 
 	generateTextarea(field) {
@@ -120,7 +135,18 @@ export class Form {
 		return list;
 	}
 
-	generateButton() {}
+	generateSubmit(field) {
+		let button = document.createElement("button");
+		button.textContent = field.title;
+		button.type = "submit";
+
+		button.addEventListener("click", (e) => {
+			e.preventDefault();
+			this.submit();
+		});
+
+		return button;
+	}
 
 	submit() {}
 }

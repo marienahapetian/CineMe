@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="src/css/main.css" />
 		<script defer src="src/js/parts.js"></script>
+		<script defer src="src/js/login.js" type="module"></script>
 
 		<title>CineMe</title>
 	</head>
@@ -22,24 +23,9 @@
 				</div>
 
 				<!-- Tab content -->
-				<div id="login" class="tabcontent">
-					<form class="flex flex-col gap-20">
-						<input type="text" name="username" placeholder="username" />
-						<input type="password" name="password" placeholder="password" />
-						<button type="submit" value="login">Login</button>
-					</form>
-				</div>
+				<div id="login" class="tabcontent"></div>
 
-				<div id="register" class="tabcontent">
-					<form class="flex flex-col gap-20">
-						<input type="text" name="name" placeholder="Name" />
-						<input type="text" name="lastname" placeholder="Last name" />
-						<input type="email" name="email" placeholder="Email" />
-						<input type="password" name="password" placeholder="Password" />
-						<input type="password" name="password2" placeholder="Repeat Password" />
-						<button type="submit" value="login">Sign Up</button>
-					</form>
-				</div>
+				<div id="register" class="tabcontent"></div>
 			</main>
 
 			<footer></footer>
