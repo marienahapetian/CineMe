@@ -1,3 +1,4 @@
+import { Pagination } from "./Pagination";
 let html = "";
 
 String.prototype.urlfriendly = function () {
