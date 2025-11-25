@@ -516,19 +516,30 @@ footer #social-icons li {
 .category-page .content-sidebar aside section h3 {
   font-weight: 500;
 }
+.category-page .content-sidebar aside section select {
+  width: 100%;
+  background: white;
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 5px;
+}
 .category-page .content-sidebar aside section ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-left: 5px;
+  margin-bottom: 25px;
 }
 .category-page .content-sidebar aside section ul label {
   display: flex;
+  flex-direction: row-reverse;
   gap: 5px;
   align-items: center;
   color: #bdbfdd;
   font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
 }
 .category-page .content-sidebar aside section ul label input {
   height: 10px;

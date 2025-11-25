@@ -1,3 +1,5 @@
+import { Lightbox } from "./Lightbox.js";
+
 let html = "";
 
 async function displayContent(id) {
@@ -10,6 +12,9 @@ async function displayContent(id) {
 		const data = await response.json();
 
 		let movie = data.movies.find((movie) => movie.id == id);
+
+		document.getElementById("year").textContent = movie.year;
+		document.getElementById("genre").textContent = movie.genre.join(" ");
 
 		document.querySelector(".main-img img").src = movie.image;
 

@@ -1,4 +1,4 @@
-class Lightbox {
+export class Lightbox {
 	constructor(galleryCont) {
 		this.galleryContainer = galleryCont;
 		this.galleryItems = Array.from(this.galleryContainer.children);

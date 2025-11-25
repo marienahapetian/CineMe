@@ -1,3 +1,5 @@
+import { Form } from "./Form.js";
+import { Pagination } from "./Pagination.js";
 let html = "";
 
 async function displayContent(page, perPage) {
@@ -10,6 +12,22 @@ async function displayContent(page, perPage) {
 		const data = await response.json();
 
 		let shows = data.shows;
+
+		let yearsOptions = [...new Set(shows.map((show) => show.year))].sort();
+
+		let genres = shows.map((show) => show.genre);
+
+		let genreOptions = [...new Set(genres.reduce((a, b) => [...a, ...b], []))].sort();
+
+		let form = new Form({
+			id: "filter-form",
+			fields: [
+				{ title: "Genre", type: "checkbox", values: genreOptions },
+				{ title: "Years", type: "checkbox", values: yearsOptions },
+			],
+		});
+
+		document.getElementById("filters").appendChild(form);
 
 		let pagination = new Pagination(shows, perPage, page);
 		pagination.create();

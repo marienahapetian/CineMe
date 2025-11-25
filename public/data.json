@@ -7,7 +7,8 @@
 			"profession": "Director",
 			"image": "/src/img/People/Sev+RESIZED.png",
 			"thumbs": ["/src/img/People/sev/thumb1.avif", "/src/img/People/sev/thumb2.jpg", "/src/img/People/sev/thumb3.jpeg"],
-			"movies": [1, 10]
+			"movies": [1, 10],
+			"gender": "Male"
 		},
 		{
 			"id": 2,
@@ -16,7 +17,8 @@
 			"profession": "Actress Singer",
 			"image": "/src/img/People/1140-cher.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg", "/src/img/People/cher/thumb2.jpg", "/src/img/People/cher/thumb3.jpg"],
-			"movies": [11, 12]
+			"movies": [11, 12],
+			"gender": "Female"
 		},
 		{
 			"id": 3,
@@ -25,7 +27,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/ericbogosian.jpg",
 			"thumbs": ["/src/img/People/eric/thumb1.jpg", "/src/img/People/eric/thumb2.jpeg", "/src/img/People/eric/thumb3.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5, 8],
+			"gender": "Male"
 		},
 		{
 			"id": 4,
@@ -34,7 +37,8 @@
 			"profession": "Actress",
 			"image": "/src/img/People/angelasarafyan.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5, 8],
+			"gender": "Female"
 		},
 		{
 			"id": 5,
@@ -43,7 +47,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/cosmojarvis.webp",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5, 8],
+			"gender": "Male"
 		},
 		{
 			"id": 6,
@@ -59,7 +64,8 @@
 				"/src/img/People/hovik/thumb5.jpg",
 				"/src/img/People/hovik/thumb6.jpg"
 			],
-			"movies": [1, 5, 8]
+			"movies": [1, 5, 8],
+			"gender": "Male"
 		},
 		{
 			"id": 7,
@@ -68,7 +74,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/edgarmadatian.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5, 8],
+			"gender": "Male"
 		},
 		{
 			"id": 8,
@@ -77,7 +84,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/KarenKaragulian.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [15],
+			"gender": "Male"
 		},
 		{
 			"id": 9,
@@ -86,7 +94,8 @@
 			"profession": "Actress",
 			"image": "/src/img/People/rowanblanchard.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5],
+			"gender": "Female"
 		},
 		{
 			"id": 10,
@@ -95,7 +104,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/marcokhanlian.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5],
+			"gender": "Male"
 		},
 		{
 			"id": 11,
@@ -104,7 +114,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/andyserkis.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5, 8],
+			"gender": "Male"
 		},
 		{
 			"id": 12,
@@ -113,7 +124,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/aznavour.jpg",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5],
+			"gender": "Male"
 		},
 		{
 			"id": 13,
@@ -122,7 +134,8 @@
 			"profession": "Actor",
 			"image": "/src/img/People/joemanganiello.png",
 			"thumbs": ["/src/img/People/cher/thumb1.jpg"],
-			"movies": [1, 5, 8]
+			"movies": [1, 5],
+			"gender": "Male"
 		},
 		{
 			"id": 14,
@@ -142,7 +155,28 @@
 						}
 					]
 				}
-			]
+			],
+			"gender": "Male"
+		},
+		{
+			"id": 15,
+			"name": "Jeff Atmajian",
+			"birth": "1960",
+			"profession": "Composer Orchestrator",
+			"image": "/src/img/People/jeff/main.png",
+			"thumbs": [],
+			"movies": [8],
+			"gender": "Male"
+		},
+		{
+			"id": 16,
+			"name": "Vache Tovmasyan",
+			"birth": "July 15, 1986",
+			"profession": "Actor Comedian",
+			"image": "/src/img/People/vache/main.webp",
+			"thumbs": [],
+			"movies": [15],
+			"gender": "Male"
 		}
 	],
 
@@ -152,6 +186,7 @@
 			"name": "Amerikatsi",
 			"image": "/src/img/Movies/amerikatsi.jpg",
 			"year": "2022",
+			"genre": ["Comedy", "Drama"],
 			"thumbs": ["/src/img/Movies/amerikatsi/thumb1.webp", "/src/img/Movies/amerikatsi/thumb2.jpg", "/src/img/Movies/amerikatsi/thumb3.jpg"]
 		},
 		{
@@ -159,6 +194,7 @@
 			"name": "Lord of the rings",
 			"image": "/src/img/Movies/lordoftherings.jpg",
 			"year": "1997",
+			"genre": ["Fantasy", "Drama"],
 			"thumbs": []
 		},
 		{
@@ -166,6 +202,7 @@
 			"name": "Titanic",
 			"image": "/src/img/Movies/titanic.jpg",
 			"year": "1997",
+			"genre": ["Historical", "Drama"],
 			"thumbs": []
 		},
 		{
@@ -173,6 +210,7 @@
 			"name": "Kill Bill",
 			"image": "/src/img/Movies/killbill.jpg",
 			"year": "2003",
+			"genre": ["Comedy", "Action"],
 			"thumbs": []
 		},
 		{
@@ -180,6 +218,7 @@
 			"name": "Harry Potter",
 			"image": "/src/img/Movies/harrypotter.jpg",
 			"year": "2003",
+			"genre": ["Comedy", "Fantasy"],
 			"thumbs": []
 		},
 		{
@@ -187,6 +226,7 @@
 			"name": "Pretty Woman",
 			"image": "/src/img/Movies/prettywoman.jpg",
 			"year": "2003",
+			"genre": ["Comedy", "Drama"],
 			"thumbs": []
 		},
 		{
@@ -194,6 +234,7 @@
 			"name": "Star Wars",
 			"image": "/src/img/Movies/starwars.jpg",
 			"year": "2003",
+			"genre": ["Fantasy", "Action"],
 			"thumbs": []
 		},
 		{
@@ -201,6 +242,7 @@
 			"name": "Wicked",
 			"image": "/src/img/Movies/wicked.jpg",
 			"year": "2024",
+			"genre": ["Comedy", "Musical", "Fantasy"],
 			"thumbs": []
 		},
 		{
@@ -208,6 +250,7 @@
 			"name": "Fast & Furious",
 			"image": "/src/img/Movies/fastandfurious.jpg",
 			"year": "2003",
+			"genre": ["Comedy", "Action"],
 			"thumbs": []
 		},
 		{
@@ -215,6 +258,7 @@
 			"name": "Sinners",
 			"image": "/src/img/Movies/sinners.jpg",
 			"year": "2024",
+			"genre": ["Fantasy", "Action", "Horror"],
 			"thumbs": []
 		},
 		{
@@ -222,6 +266,7 @@
 			"name": "Burlesque",
 			"image": "/src/img/Movies/burlesque.jpg",
 			"year": "2010",
+			"genre": ["Comedy", "Musical"],
 			"thumbs": []
 		},
 		{
@@ -229,6 +274,7 @@
 			"name": "Moonstruck",
 			"image": "/src/img/Movies/moonstruck.jpg",
 			"year": "1987",
+			"genre": ["Comedy", "Drama"],
 			"thumbs": []
 		},
 		{
@@ -236,6 +282,7 @@
 			"name": "Step Up 2: The streets",
 			"image": "/src/img/Movies/stepup2/main.jpg",
 			"year": "2008",
+			"genre": ["Musical", "Drama"],
 			"thumbs": []
 		},
 		{
@@ -243,6 +290,15 @@
 			"name": "Step Up 3D",
 			"image": "/src/img/Movies/stepup3/main.jpeg",
 			"year": "2010",
+			"genre": ["Musical", "Drama"],
+			"thumbs": []
+		},
+		{
+			"id": 15,
+			"name": "Anora",
+			"image": "/src/img/Movies/anora/main.jpeg",
+			"year": "2024",
+			"genre": ["Comedy"],
 			"thumbs": []
 		}
 	],
@@ -252,6 +308,7 @@
 			"name": "Lucifer",
 			"image": "/src/img/Shows/lucifer/main.webp",
 			"year": "2016",
+			"genre": ["Horror", "Action", "Comedy"],
 			"thumbs": []
 		}
 	],

@@ -1,3 +1,5 @@
+import { Form } from "./Form.js";
+import { Pagination } from "./Pagination.js";
 let html = "";
 
 async function displayContent() {
@@ -10,6 +12,21 @@ async function displayContent() {
 		const data = await response.json();
 
 		let actors = data.actors;
+
+		let professions = actors.map((actor) => actor.profession.split(" "));
+		let professionOptions = [...new Set(professions.reduce((a, b) => [...a, ...b], []))].sort();
+
+		let genderOptions = [...new Set(actors.map((actor) => actor.gender))].sort();
+
+		let form = new Form({
+			id: "filter-form",
+			fields: [
+				{ title: "Profession", type: "checkbox", values: professionOptions },
+				{ title: "Gender", type: "radio", values: genderOptions },
+			],
+		});
+
+		document.getElementById("filters").appendChild(form);
 
 		let pagination = new Pagination(actors, perPage, page);
 		pagination.create();

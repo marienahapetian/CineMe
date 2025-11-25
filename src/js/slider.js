@@ -1,4 +1,4 @@
-class Slider {
+export class Slider {
 	constructor(sliderCont, visibleCount = 4, height = 300) {
 		this.sliderContainer = sliderCont;
 		this.visibleCount = visibleCount;
@@ -14,6 +14,12 @@ class Slider {
 		this.addControls();
 
 		this.addEventListeners();
+
+		if (sliderCont.getAttribute("data-autoplay")) {
+			setInterval(() => {
+				this.nextSlide();
+			}, 5000);
+		}
 	}
 
 	addEventListeners() {
@@ -100,9 +106,9 @@ class Slider {
 		console.log("in nextSlide", this.currentIndex, this.visibleCount, this.totalSlides);
 
 		// deactivate next arrow on slider end
-		if (this.currentIndex + this.visibleCount >= this.totalSlides) return;
+		if (this.currentIndex + this.visibleCount >= this.totalSlides) this.currentIndex = 0;
+		else this.currentIndex++;
 
-		this.currentIndex++;
 		this.goToSlide(this.currentIndex);
 	}
 

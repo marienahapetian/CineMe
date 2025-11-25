@@ -22,7 +22,7 @@ async function addHeader() {
 	document.querySelector("header").innerHTML = html;
 
 	document.querySelectorAll("#primary-nav a").forEach((element) => {
-		debugger;
+		//debugger;
 		if (element.href.replace(base, "") == pathname) {
 			element.classList.add("current");
 		} else {

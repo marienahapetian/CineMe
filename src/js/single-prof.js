@@ -1,3 +1,4 @@
+import { Lightbox } from "./Lightbox.js";
 let html = "";
 
 function age(actor) {
@@ -22,6 +23,10 @@ async function displayContent(id) {
 
 		let actor = data.actors.find((actor) => actor.id == id);
 
+		document.getElementById("profession").textContent = actor.profession;
+		document.getElementById("name").textContent = actor.name;
+		document.getElementById("birthdate").textContent = "Born: " + actor.birth + " ( Age: " + age(actor) + " yo )";
+
 		document.querySelector(".main-img img").src = actor.image;
 
 		actor.thumbs.forEach((thumb) => {
@@ -31,22 +36,43 @@ async function displayContent(id) {
 			document.querySelector(".gallery").appendChild(singleImage);
 		});
 
-		actor.movies.forEach((movieId) => {
-			let movie = data.movies.find((mov) => mov.id == movieId);
-			let movieRow = document.createElement("tr");
-			movieRow.innerHTML = "<td><a href='single-movie.html?id=" + movie.id + "'>" + movie.name + "</a></td><td>Actor</td><td>" + movie.year + "</td>";
-			document.getElementById("movies").append(movieRow);
-		});
+		if (actor.movies) {
+			let table = document.createElement("table");
+			let thead = document.createElement("thead");
+			thead.innerHTML = `<td colspan="3">Movies</td>`;
 
-		actor.shows.forEach((showObj) => {
-			let show = data.shows.find((show) => show.id == showObj.id);
-			let showRow = document.createElement("tr");
-			showRow.innerHTML = "<td><a href='single-show.html?id=" + show.id + "'>" + show.name + "</a></td><td>Actor</td><td>" + show.year + "</td>";
-			document.getElementById("shows").append(showRow);
-		});
+			let tbody = document.createElement("tbody");
+			tbody.id = "movies";
+			actor.movies.forEach((movieId) => {
+				let movie = data.movies.find((mov) => mov.id == movieId);
+				let movieRow = document.createElement("tr");
+				movieRow.innerHTML = "<td><a href='single-movie.html?id=" + movie.id + "'>" + movie.name + "</a></td><td>Actor</td><td>" + movie.year + "</td>";
+				tbody.append(movieRow);
+			});
+			table.appendChild(thead);
+			table.appendChild(tbody);
 
-		document.getElementById("name").textContent = actor.name;
-		document.getElementById("birthdate").textContent = "Born: " + actor.birth + " ( Age: " + age(actor) + " yo )";
+			document.querySelector(".right-content").appendChild(table);
+		}
+
+		if (actor.shows) {
+			let table = document.createElement("table");
+			let thead = document.createElement("thead");
+			thead.innerHTML = `<td colspan="3">Shows</td>`;
+
+			let tbody = document.createElement("tbody");
+			tbody.id = "shows";
+			actor.shows.forEach((showObj) => {
+				let show = data.shows.find((show) => show.id == showObj.id);
+				let showRow = document.createElement("tr");
+				showRow.innerHTML = "<td><a href='single-show.html?id=" + show.id + "'>" + show.name + "</a></td><td>Actor</td><td>" + show.year + "</td>";
+				tbody.append(showRow);
+			});
+			table.appendChild(thead);
+			table.appendChild(tbody);
+
+			document.querySelector(".right-content").appendChild(table);
+		}
 	} catch (err) {
 		console.log(err);
 	}

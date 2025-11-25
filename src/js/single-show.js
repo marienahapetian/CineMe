@@ -1,3 +1,5 @@
+import { Lightbox } from "./Lightbox.js";
+
 let html = "";
 
 async function displayContent(id) {

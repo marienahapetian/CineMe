@@ -1,4 +1,4 @@
-class Pagination {
+export class Pagination {
 	constructor(data, perPage = 10, currPage = 1) {
 		// data has to be array
 		this.data = data;

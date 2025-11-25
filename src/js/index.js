@@ -1,3 +1,5 @@
+import { Slider } from "./Slider.js";
+
 fetch("/public/data.json")
 	.then((response) => response.json())
 	.then((data) => {

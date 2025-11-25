@@ -7,8 +7,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Jua&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="src/css/main.css" />
-		<script defer src="src/js/Pagination.js"></script>
-		<script defer src="src/js/movies.js"></script>
+		<script defer src="src/js/movies.js" type="module"></script>
 		<script defer src="src/js/parts.js"></script>
 
 		<title>CineMe</title>
@@ -21,54 +20,7 @@
 				<h2 class="text-center">Movies</h2>
 				<div class="content-sidebar">
 					<aside class="flex flex-col">
-						<section>
-							<h3>Gender</h3>
-							<ul>
-								<li>
-									<label><input type="radio" value="all" name="gender" /><span>All</span></label>
-								</li>
-								<li>
-									<label><input type="radio" value="male" name="gender" /><span>Male</span></label>
-								</li>
-								<li>
-									<label><input type="radio" value="female" name="gender" /><span>Female</span></label>
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h3>Age</h3>
-							<ul>
-								<li>
-									<label><input type="checkbox" value="all" checked /><span>All</span></label>
-								</li>
-								<li>
-									<label><input type="checkbox" value="20-30" /><span>20-30 yo</span></label>
-								</li>
-								<li>
-									<label><input type="checkbox" value="31-40" /><span>31-40 yo</span></label>
-								</li>
-								<li>
-									<label><input type="checkbox" value="41-50" /><span>41-50 yo</span></label>
-								</li>
-								<li>
-									<label><input type="checkbox" value="50+" /><span>50+ yo</span></label>
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h3>Profession</h3>
-							<ul>
-								<li>
-									<label><input type="checkbox" value="all" checked /><span>All</span></label>
-								</li>
-								<li>
-									<label><input type="checkbox" value="stunt" /><span>Stunt Double</span></label>
-								</li>
-								<li>
-									<label><input type="checkbox" value="crowd" /><span>Crowd Work</span></label>
-								</li>
-							</ul>
-						</section>
+						<section id="filters"></section>
 					</aside>
 
 					<div class="content">

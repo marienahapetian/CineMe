@@ -182,19 +182,31 @@ footer {
 					font-weight: 500;
 				}
 
+				select {
+					width: 100%;
+					background: white;
+					border: 1px solid #bababa;
+					border-radius: $smallBorderRadius;
+					padding: $smallPadding $normalPadding;
+					margin-top: 5px;
+				}
+
 				ul {
 					display: flex;
 					flex-direction: column;
 					gap: 5px;
 					padding-left: 5px;
+					margin-bottom: $bigPadding;
 
 					label {
 						display: flex;
+						flex-direction: row-reverse;
 						gap: 5px;
 						align-items: center;
 						color: $primaryblue;
 						font-size: 14px;
 						font-weight: 500;
+						cursor: pointer;
 
 						input {
 							height: 10px;
